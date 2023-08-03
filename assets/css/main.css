@@ -4123,8 +4123,8 @@ input, select, textarea {
 
 
 .social-wrap {
-	display: flex;
-	flex-direction: column;
+	/* display: flex; */
+	/* flex-direction: column; */
 }
 
 .label {
@@ -4141,28 +4141,30 @@ input, select, textarea {
 }
 
 .pdf-container {
-	height: 145vh;
+	height: 129vh;
 	overflow: hidden;
+	display: flex;
+	justify-content: center;
 }
 
 .pdf-container iframe {
 	position: relative;
-	width: 100%;
+	width: 100vh;
 }
 
 /* Media query for screens smaller than or equal to 768px */
 @media screen and (max-width: 768px) {
 	.pdf-container {
-		
-		/* width: 80%; */
-		height: 52vh; /* Adjust the height for smaller screens */
+		height: 47.5vh;
+		width: 67.5vh;
 	}
 }
 
 /* Media query for screens smaller than or equal to 480px */
 @media screen and (max-width: 480px) {
 	.pdf-container {
-		height: 46vh; /* Adjust the height for even smaller screens */
+		height: 35vh;
+		width: 42vh;
 	}
 }
 
