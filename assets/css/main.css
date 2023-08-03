@@ -4153,14 +4153,14 @@ input, select, textarea {
 /* Media query for screens smaller than or equal to 768px */
 @media screen and (max-width: 768px) {
 	.pdf-container {
-		height: 100vh; /* Adjust the height for smaller screens */
+		height: 110vh; /* Adjust the height for smaller screens */
 	}
 }
 
 /* Media query for screens smaller than or equal to 480px */
 @media screen and (max-width: 480px) {
 	.pdf-container {
-		height: 80vh; /* Adjust the height for even smaller screens */
+		height: 46vh; /* Adjust the height for even smaller screens */
 	}
 }
 
@@ -4177,12 +4177,34 @@ input, select, textarea {
 	justify-content: center;
 }
 
+@media screen and (max-width: 480px) {
+	#flex-center {
+	  justify-content: initial; /* or justify-content: unset; */
+	}
+}
+@media screen and (max-width: 768px) {
+	#flex-center {
+	  justify-content: initial; /* or justify-content: unset; */
+	}
+}
+
 #skills {
 	width: 15%;
 }
 
 #skills > h3 {
 	line-height: 0.9em;
+}
+
+@media screen and (max-width: 480px) {
+	#skills {
+	  width: 25%;
+	}
+}
+@media screen and (max-width: 768px) {
+	#skills {
+	  width: 25%;
+	}
 }
 
 .line {
