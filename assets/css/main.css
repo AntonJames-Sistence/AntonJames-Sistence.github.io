@@ -4141,17 +4141,27 @@ input, select, textarea {
 }
 
 .pdf-container {
-	/* position: relative; */
-	/* width: 80%; */
-	height: 142vh;
+	height: 145vh;
 	overflow: hidden;
 }
 
 .pdf-container iframe {
-	/* position: absolute; */
-	width: 69%;
-	height: 100%;
-	border: none;
+	position: relative;
+	
+}
+
+/* Media query for screens smaller than or equal to 768px */
+@media screen and (max-width: 768px) {
+	.pdf-container {
+		height: 100vh; /* Adjust the height for smaller screens */
+	}
+}
+
+/* Media query for screens smaller than or equal to 480px */
+@media screen and (max-width: 480px) {
+	.pdf-container {
+		height: 80vh; /* Adjust the height for even smaller screens */
+	}
 }
 
 
