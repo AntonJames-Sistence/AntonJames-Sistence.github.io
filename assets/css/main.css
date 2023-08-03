@@ -4133,7 +4133,7 @@ input, select, textarea {
 }
 
 #one{
-	height: 100vh;
+	/* height: 100vh; */
 	box-shadow: none;
 }
 #projects {
@@ -4147,13 +4147,15 @@ input, select, textarea {
 
 .pdf-container iframe {
 	position: relative;
-	
+	width: 100%;
 }
 
 /* Media query for screens smaller than or equal to 768px */
 @media screen and (max-width: 768px) {
 	.pdf-container {
-		height: 110vh; /* Adjust the height for smaller screens */
+		
+		/* width: 80%; */
+		height: 52vh; /* Adjust the height for smaller screens */
 	}
 }
 
@@ -4184,7 +4186,7 @@ input, select, textarea {
 }
 @media screen and (max-width: 768px) {
 	#flex-center {
-	  justify-content: initial; /* or justify-content: unset; */
+	  justify-content: center;
 	}
 }
 
@@ -4203,7 +4205,7 @@ input, select, textarea {
 }
 @media screen and (max-width: 768px) {
 	#skills {
-	  width: 25%;
+	  width: 30%;
 	}
 }
 
