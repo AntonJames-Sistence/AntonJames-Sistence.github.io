@@ -4214,3 +4214,7 @@ input, select, textarea {
 .line {
 	margin: 0 0 3em 0;
 }
+
+#video {
+	z-index: 100;
+}
