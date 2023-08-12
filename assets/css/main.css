@@ -3546,6 +3546,8 @@ input, select, textarea {
 		background: #272833;
 		padding: 6em 0;
 		text-align: center;
+		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 
 		#footer .icons .icon.alt {
@@ -4222,7 +4224,24 @@ input, select, textarea {
 
 .content > header > a {
 	border-bottom: none;
+	font-size: 20px;
 }
 .content > header > a:hover {
 	color: white !important;
+}
+
+.scroll-arrow {
+	position: fixed;
+	bottom: 20px;
+	left: 30px; 
+	opacity: 0; 
+	transition: opacity 0.5s ease-in-out;
+	z-index: 200;
+}
+.scroll-arrow:hover {
+	cursor: pointer;
+}
+
+.scroll-arrow .arrow {
+	font-size: 40px;
 }
