@@ -2180,7 +2180,7 @@ input, select, textarea {
 	}
 
 	header.major {
-		margin: 0 0 4em 0;
+		margin: 0 0 2em 0;
 		position: relative;
 		text-align: center;
 	}
@@ -4196,7 +4196,7 @@ input, select, textarea {
 }
 
 #skills {
-	width: 15%;
+	width: 25%;
 }
 
 #skills > h3 {
