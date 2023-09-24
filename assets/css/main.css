@@ -4245,3 +4245,34 @@ input, select, textarea {
 .scroll-arrow .arrow {
 	font-size: 40px;
 }
+
+.button-link-blue {
+	color: #537fc6 !important;
+	box-shadow: inset 0 0 0 1px #537fc6;
+}
+.button-link-yellow {
+	color: #c79371 !important;
+	box-shadow: inset 0 0 0 1px #c79371;
+}
+.button-link-purple {
+	color: #ca7fea !important;
+	box-shadow: inset 0 0 0 1px #ca7fea;
+}
+
+.tech-text {
+	font-weight: 900;
+	font-style: italic;
+	font-size: 18px;
+}
+.blue-text {
+	color: #79a4e9;
+	font-size: 16px;
+}
+.yellow-text {
+	color: #c79371;
+	font-size: 16px;
+}
+.purple-text {
+	color: #ca7fea;
+	font-size: 16px;
+}
