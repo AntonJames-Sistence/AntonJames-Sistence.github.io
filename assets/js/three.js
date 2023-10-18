@@ -14,7 +14,7 @@ const init = () => {
 
     starGeo = new THREE.BufferGeometry();
     const positions = [];
-    for (let i = 0; i < 6000; i++) {
+    for (let i = 0; i < 10000; i++) {
         positions.push(
             Math.random() * 500 - 300,
             Math.random() * 500 - 300,
@@ -40,8 +40,8 @@ const init = () => {
 
 const animate = () => {
     // Rotate the stars
-    stars.rotation.x += 0.0005;
-    stars.rotation.y += 0.0005;
+    stars.rotation.x += 0.0015;
+    stars.rotation.y += 0.0015;
   
     // Access the position attribute of the starGeo
     const positions = starGeo.getAttribute('position');
