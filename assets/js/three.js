@@ -11,9 +11,6 @@ const init = () => {
 
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    
-
-    // document.body.appendChild(renderer.domElement);
 
     starGeo = new THREE.BufferGeometry();
     const positions = [];
@@ -26,11 +23,13 @@ const init = () => {
     }
     starGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions), 3));
 
+    // ===========
+    // ===========
 
     let sprite = new THREE.TextureLoader().load('star.png');
     let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 0.7,
+        size: 0.9,
         map: sprite
     });
 
@@ -38,12 +37,38 @@ const init = () => {
     scene.add(stars);
 
     animate();
-}
+};
 
 const animate = () => {
-    renderer.render(scene,camera);
-    requestAnimationFrame(animate);
+    // Rotate the stars
+    stars.rotation.x += 0.0005;
+    stars.rotation.y += 0.0005;
+  
+    // Access the position attribute of the starGeo
+    const positions = starGeo.getAttribute('position');
+  
+    // Iterate through each star's position and apply animation
+    for (let i = 0; i < positions.count; i++) {
+      const x = positions.getX(i);
+      const y = positions.getY(i);
+      const z = positions.getZ(i);
+  
+      // Apply animation to the stars (e.g., make them twinkle)
+    const time = Date.now() * 0.00005;
+    const newX = x + Math.sin(time + i) * 1;
+    const newY = y + Math.sin(time + i) * 1;
+    const newZ = z + Math.sin(time + i) * 1;
+
+    // Update the position attribute with the animated values
+    positions.setXYZ(i, newX, newY, newZ);
 }
+  
+    // Mark the attribute as needing update
+    positions.needsUpdate = true;
+  
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+};
 
 window.onload = () => {
   init();
