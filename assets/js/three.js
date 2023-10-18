@@ -12,17 +12,20 @@ const init = () => {
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     
-    document.body.appendChild(renderer.domElement);
 
-    starGeo = new THREE.Geometry();
-    for(let i = 0; i < 6000; i++){ 
-        star = new THREE.Vector3(
-            Math.random() * 600 - 300,
-            Math.random() * 600 - 300,
-            Math.random() * 600 - 300
+    // document.body.appendChild(renderer.domElement);
+
+    starGeo = new THREE.BufferGeometry();
+    const positions = [];
+    for (let i = 0; i < 6000; i++) {
+        positions.push(
+            Math.random() * 800 - 300,
+            Math.random() * 800 - 300,
+            Math.random() * 800 - 300
         );
-        starGeo.vertices.push(star);
-    };
+    }
+    starGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions), 3));
+
 
     let sprite = new THREE.TextureLoader().load('star.png');
     let starMaterial = new THREE.PointsMaterial({
@@ -41,4 +44,11 @@ const animate = () => {
     renderer.render(scene,camera);
     requestAnimationFrame(animate);
 }
-init;
+
+window.onload = () => {
+  init();
+
+  // Select the #stars-container element and append the renderer's domElement to it
+  const starsContainer = document.getElementById('stars-container');
+  starsContainer.appendChild(renderer.domElement);
+};
