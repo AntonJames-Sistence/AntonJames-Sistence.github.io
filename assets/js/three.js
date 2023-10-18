@@ -16,21 +16,20 @@ const init = () => {
     const positions = [];
     for (let i = 0; i < 6000; i++) {
         positions.push(
-            Math.random() * 800 - 300,
-            Math.random() * 800 - 300,
-            Math.random() * 800 - 300
+            Math.random() * 500 - 300,
+            Math.random() * 500 - 300,
+            Math.random() * 500 - 300
         );
     }
     starGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions), 3));
 
-    // ===========
-    // ===========
-
-    let sprite = new THREE.TextureLoader().load('star.png');
+    let sprite = new THREE.TextureLoader().load('./images/star.png');
     let starMaterial = new THREE.PointsMaterial({
-        color: 0xaaaaaa,
-        size: 0.9,
-        map: sprite
+        // color: 0xaaaaaa,
+        size: 1.7,
+        map: sprite,
+        alphaTest: 0.5, // Adjust this value to control transparency threshold
+        transparent: true, // Enable transparency
     });
 
     stars = new THREE.Points(starGeo,starMaterial);
@@ -47,21 +46,24 @@ const animate = () => {
     // Access the position attribute of the starGeo
     const positions = starGeo.getAttribute('position');
   
-    // Iterate through each star's position and apply animation
+    // Iterate through each star's position and move them towards the camera
     for (let i = 0; i < positions.count; i++) {
       const x = positions.getX(i);
       const y = positions.getY(i);
       const z = positions.getZ(i);
   
-      // Apply animation to the stars (e.g., make them twinkle)
-    const time = Date.now() * 0.00005;
-    const newX = x + Math.sin(time + i) * 1;
-    const newY = y + Math.sin(time + i) * 1;
-    const newZ = z + Math.sin(time + i) * 1;
-
-    // Update the position attribute with the animated values
-    positions.setXYZ(i, newX, newY, newZ);
-}
+      // Calculate the new position by moving stars towards the camera (negative Z direction)
+      const speed = 0.05; // Adjust this value to control the speed of the stars
+      const newZ = z - speed;
+  
+      // Check if the star is too close to the camera, and reset its position
+      if (newZ < -300) {
+        // Reset the star's position far in the positive Z direction
+        positions.setXYZ(i, Math.random() * 600 - 300, Math.random() * 600 - 300, 600);
+      } else {
+        positions.setXYZ(i, x, y, newZ);
+      }
+    }
   
     // Mark the attribute as needing update
     positions.needsUpdate = true;
@@ -69,6 +71,7 @@ const animate = () => {
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
 };
+  
 
 window.onload = () => {
   init();
