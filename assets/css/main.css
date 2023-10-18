@@ -4289,10 +4289,3 @@ input, select, textarea {
 .space {
 	height: 40px;
 }
-
-#stars-container {
-	position: absolute;
-	top: -110px;
-	left: -361px;
-	z-index: -100;
-}
