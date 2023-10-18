@@ -4289,18 +4289,3 @@ input, select, textarea {
 .space {
 	height: 40px;
 }
-
-#smoke {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background for smoke effect */
-}
-#threejs-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999; /* Place the Three.js container in front of the smoke */
-}

@@ -1,50 +1,44 @@
 import * as THREE from 'three';
 
-// Create a scene
-const scene = new THREE.Scene();
+let scene, camera, renderer, starGeo, stars, star;
 
-// Create a camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
+const init = () => {
+    scene = new THREE.Scene();
 
-// Create a renderer and add it to the DOM
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('threejs-container').appendChild(renderer.domElement);
+    camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1, 1000);
+    camera.position.z = 1;
+    camera.rotation.x = Math.PI/2;
 
-// Create a smoke particle system
-const smokeGeometry = new THREE.BufferGeometry();
-const smokeMaterial = new THREE.PointsMaterial({ color: 0xaaaaaa, size: 0.1 });
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    
+    document.body.appendChild(renderer.domElement);
 
-const smokeParticles = new THREE.Points(smokeGeometry, smokeMaterial);
-scene.add(smokeParticles);
+    starGeo = new THREE.Geometry();
+    for(let i = 0; i < 6000; i++){ 
+        star = new THREE.Vector3(
+            Math.random() * 600 - 300,
+            Math.random() * 600 - 300,
+            Math.random() * 600 - 300
+        );
+        starGeo.vertices.push(star);
+    };
 
-// Set up the smoke particles' positions and animation
-const smokeCount = 1000;
-const positions = new Float32Array(smokeCount * 3);
+    let sprite = new THREE.TextureLoader().load('star.png');
+    let starMaterial = new THREE.PointsMaterial({
+        color: 0xaaaaaa,
+        size: 0.7,
+        map: sprite
+    });
 
-for (let i = 0; i < smokeCount * 3; i++) {
-    positions[i] = (Math.random() - 0.5) * 10;
+    stars = new THREE.Points(starGeo,starMaterial);
+    scene.add(stars);
+
+    animate();
 }
 
-smokeGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
-// Animate the smoke particles (e.g., make them rise)
-function animateSmoke() {
-    const positionAttribute = smokeGeometry.getAttribute('position');
-
-    for (let i = 0; i < smokeCount; i++) {
-        positionAttribute.setXYZ(i, positionAttribute.getX(i), positionAttribute.getY(i) + 0.01, positionAttribute.getZ(i));
-    }
-
-    positionAttribute.needsUpdate = true;
-}
-
-// Call the animateSmoke function in your animation loop
-function animate() {
+const animate = () => {
+    renderer.render(scene,camera);
     requestAnimationFrame(animate);
-    animateSmoke();
-    // Other animations and rendering code here
-    renderer.render(scene, camera);
 }
-animate();
+init;
