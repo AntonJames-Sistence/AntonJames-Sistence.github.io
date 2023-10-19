@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-let scene, camera, renderer, starGeo, stars;
+let scene, camera, renderer, starGeo, stars, clonedScene, clonedStars;
 
 const starColors = [0xfa8072, 0xffffff, 0xffd700, 0x00ffff, 0x4b0082];
 
@@ -45,6 +45,13 @@ const init = () => {
     stars = new THREE.Points(starGeo, starMaterial);
     scene.add(stars);
 
+    // Clone the scene
+    clonedScene = scene.clone();
+
+    // Clone the stars object and add it to the cloned scene
+    clonedStars = stars.clone();
+    clonedScene.add(clonedStars);
+
     animate();
 };
 
@@ -55,25 +62,6 @@ const animate = () => {
   
     // Access the position attribute of the starGeo
     const positions = starGeo.getAttribute('position');
-  
-    // Iterate through each star's position and move them towards the camera
-    for (let i = 0; i < positions.count; i++) {
-      const x = positions.getX(i);
-      const y = positions.getY(i);
-      const z = positions.getZ(i);
-  
-      // Calculate the new position by moving stars towards the camera (negative Z direction)
-      const speed = 0.05; // Adjust this value to control the speed of the stars
-      const newZ = z - speed;
-  
-      // Check if the star is too close to the camera, and reset its position
-      // if (newZ < -300) {
-      //   // Reset the star's position far in the positive Z direction
-      //   positions.setXYZ(i, Math.random() * 600 - 300, Math.random() * 600 - 300, 600);
-      // } else {
-      //   positions.setXYZ(i, x, y, newZ);
-      // }
-    }
   
     // Mark the attribute as needing update
     positions.needsUpdate = true;
