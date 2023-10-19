@@ -1,38 +1,48 @@
 import * as THREE from 'three';
 
-let scene, camera, renderer, starGeo, stars, star;
+let scene, camera, renderer, starGeo, stars;
+
+const starColors = [0xfec5be, 0xffffff, 0xcf9ef9, 0xe3ffe9, 0xfde4b1];
 
 const init = () => {
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1, 1000);
     camera.position.z = 1;
-    camera.rotation.x = Math.PI/2;
 
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     starGeo = new THREE.BufferGeometry();
     const positions = [];
+    const colors = [];
+
     for (let i = 0; i < 10000; i++) {
-        positions.push(
-            Math.random() * 500 - 300,
-            Math.random() * 500 - 300,
-            Math.random() * 500 - 300
-        );
+        const x = Math.random() * 500 - 300;
+        const y = Math.random() * 500 - 300;
+        const z = Math.random() * 500 - 300;
+
+        positions.push(x, y, z);
+
+        // Choose a random color from the starColors array
+        const randomColor = starColors[Math.floor(Math.random() * starColors.length)];
+        const color = new THREE.Color(randomColor);
+        colors.push(color.r, color.g, color.b);
     }
+
     starGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions), 3));
+    starGeo.setAttribute('color', new THREE.BufferAttribute(new Float32Array(colors), 3));
 
     let sprite = new THREE.TextureLoader().load('./images/star.png');
     let starMaterial = new THREE.PointsMaterial({
-        // color: 0xaaaaaa,
         size: 1.7,
         map: sprite,
-        alphaTest: 0.5, // Adjust this value to control transparency threshold
-        transparent: true, // Enable transparency
+        alphaTest: 0.5,
+        transparent: true,
+        vertexColors: true,
     });
 
-    stars = new THREE.Points(starGeo,starMaterial);
+    stars = new THREE.Points(starGeo, starMaterial);
     scene.add(stars);
 
     animate();
@@ -45,25 +55,6 @@ const animate = () => {
   
     // Access the position attribute of the starGeo
     const positions = starGeo.getAttribute('position');
-  
-    // Iterate through each star's position and move them towards the camera
-    for (let i = 0; i < positions.count; i++) {
-      const x = positions.getX(i);
-      const y = positions.getY(i);
-      const z = positions.getZ(i);
-  
-      // Calculate the new position by moving stars towards the camera (negative Z direction)
-      const speed = 0.05; // Adjust this value to control the speed of the stars
-      const newZ = z - speed;
-  
-      // Check if the star is too close to the camera, and reset its position
-      if (newZ < -300) {
-        // Reset the star's position far in the positive Z direction
-        positions.setXYZ(i, Math.random() * 600 - 300, Math.random() * 600 - 300, 600);
-      } else {
-        positions.setXYZ(i, x, y, newZ);
-      }
-    }
   
     // Mark the attribute as needing update
     positions.needsUpdate = true;
