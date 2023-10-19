@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 
-let scene, camera, renderer, starGeo, stars, clonedScene, clonedStars;
+let scene, camera, renderer, starGeo, stars;
 
-const starColors = [0xfa8072, 0xffffff, 0xffd700, 0x00ffff, 0x4b0082];
+const starColors = [0xfec5be, 0xffffff, 0xcf9ef9, 0xe3ffe9, 0xfde4b1];
 
 const init = () => {
     scene = new THREE.Scene();
@@ -44,13 +44,6 @@ const init = () => {
 
     stars = new THREE.Points(starGeo, starMaterial);
     scene.add(stars);
-
-    // Clone the scene
-    clonedScene = scene.clone();
-
-    // Clone the stars object and add it to the cloned scene
-    clonedStars = stars.clone();
-    clonedScene.add(clonedStars);
 
     animate();
 };
