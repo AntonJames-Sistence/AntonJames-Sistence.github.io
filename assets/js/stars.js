@@ -7,7 +7,7 @@ const starColors = [0xfec5be, 0xffffff, 0xcf9ef9, 0xe3ffe9, 0xfde4b1];
 const init = () => {
     scene = new THREE.Scene();
 
-    camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1, 1000);
+    camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
     camera.position.z = 1;
 
     renderer = new THREE.WebGLRenderer();
@@ -24,7 +24,6 @@ const init = () => {
 
         positions.push(x, y, z);
 
-        // Choose a random color from the starColors array
         const randomColor = starColors[Math.floor(Math.random() * starColors.length)];
         const color = new THREE.Color(randomColor);
         colors.push(color.r, color.g, color.b);
@@ -49,25 +48,30 @@ const init = () => {
 };
 
 const animate = () => {
+    // Move the stars in the opposite direction of the camera's movement
+    stars.position.z = camera.position.z - 100;
+
     // Rotate the stars
     stars.rotation.x += 0.0015;
     stars.rotation.y += 0.0015;
-  
-    // Access the position attribute of the starGeo
+
     const positions = starGeo.getAttribute('position');
-  
-    // Mark the attribute as needing update
     positions.needsUpdate = true;
-  
+
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
 };
-  
 
 window.onload = () => {
-  init();
+    init();
 
-  // Select the #stars-container element and append the renderer's domElement to it
-  const starsContainer = document.getElementById('three-banner');
-  starsContainer.appendChild(renderer.domElement);
+    const starsContainer = document.getElementById('three-banner');
+    starsContainer.appendChild(renderer.domElement);
 };
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
