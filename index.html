@@ -23,7 +23,8 @@
 			}
 		</script>
 	</head>
-	<body class="is-preload landing">
+	<!-- add landing class to body if you need spinner -->
+	<body class="is-preload  bg-transparent"> 
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -44,20 +45,20 @@
 				</div>
 
 			<!-- Banner -->
-				<section id="three-banner" class="w-full h-screen flex">
-					<!-- Three.js renderer element will be added here -->
+				<section class="w-full h-screen flex">
+					<div id="three-banner" class="absolute -z-10">
+					</div>
 					<div class="w-1/5 flex flex-col space-between m-4">
 						<div>
-							<img class="h-auto w-full rounded-3xl" src="images/profile_pic.jpg" alt="Anton_James_Pic" />
-							<div class="text-center text-3xl font-bold">Anton James</div>
+							<img class="h-auto w-3/4 rounded-3xl" src="images/profile_pic.jpg" alt="Anton_James_Pic" />
+							<div class="text-center text-5xl font-bold">Anton James</div>
+							<div class="text-end text-xl font-bold italic">Software Engineer</div>
 						</div>
-						<div>
-							Software Engineer
-						</div>
-						<div class="flex flex-col">
+						<div class="flex flex-col m-16 text-2xl">
 							<a href="#two" class="scrolly no-underline">Projects</a>
 							<a href="#four" class="scrolly">Skills</a>
 							<a href="#five" class="scrolly">Resume</a>
+							<a href="#footer" class="scrolly">Contact me</a>
 						</div>
 					</div>
 					<div>

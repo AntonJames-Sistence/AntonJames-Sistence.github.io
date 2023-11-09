@@ -68,6 +68,6 @@ window.onload = () => {
   init();
 
   // Select the #stars-container element and append the renderer's domElement to it
-//   const starsContainer = document.getElementById('three-banner');
-//   starsContainer.appendChild(renderer.domElement);
+  const starsContainer = document.getElementById('three-banner');
+  starsContainer.appendChild(renderer.domElement);
 };
