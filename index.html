@@ -13,7 +13,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+		<script src="https://cdn.tailwindcss.com"></script>
 		<script type="importmap">
 			{
 			  "imports": {
@@ -27,71 +27,54 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
-					<!-- <h1 id="logo"><a href="index.html">Home</a></h1> -->
+				<!-- <header id="header">
 					<nav id="nav">
 						<ul>
-							<!-- <li><a href="index.html">Home</a></li> -->
-							
 							<li>
-								<!-- <a class="nav-drop-button">Tech Profiles</a> -->
 								<li><a href="https://www.linkedin.com/in/anton-james-ja/" target="_blank" class="nav-header">LinkedIn</a></li>
 								<li><a href="https://github.com/AntonJames-Sistence/" target="_blank" class="nav-header">GitHub</a></li>
 								<li><a href="https://wellfound.com/u/anton-james/" target="_blank" class="nav-header">Wellfound</a></li>
-								<!-- <ul>
-									<li><a href="https://www.linkedin.com/in/anton-james-ja/" target="_blank">LinkedIn</a></li>
-									<li><a href="https://github.com/AntonJames-Sistence/" target="_blank">GitHub</a></li>
-									<li><a href="https://wellfound.com/u/anton-james/" target="_blank">Wellfound</a></li>
-									<li>
-										<a href="#two" class="scrolly">My Projects</a>
-										<ul>
-											<li><a href="https://steamer-9bo7.onrender.com/" target="_blank">Steamer</a></li>
-											<li><a href="https://excursionexplorer.onrender.com/" target="_blank">Itinerator</a></li>
-											<li><a href="https://antonjames-sistence.github.io/Torque/" target="_blank">Torque</a></li>
-										</ul>
-									</li>
-								</ul> -->
 							</li>
-							<!-- <li><a href="elements.html">Elements</a></li> -->
-							<!-- <li><a href="#" class="button primary">Sign Up</a></li> -->
 						</ul>
 					</nav>
-				</header>
+				</header> -->
 
 				<div class="scroll-arrow" id="scrollArrow">
 					<span class="arrow"><i class="fa-solid fa-arrow-up"></i></span>
 				</div>
 
 			<!-- Banner -->
-				<section id="banner">
+				<section id="three-banner" class="w-full h-screen flex">
 					<!-- Three.js renderer element will be added here -->
-					<div class="content">
-						<header>
-							<h2 class="">Anton James</h2>
-							<p>
-								Software Engineer
-							</p>
-							<a href="#two" class="scrolly">Projects</a> |
-							<a href="#four" class="scrolly">Skills</a> |
+					<div class="w-1/5 flex flex-col space-between m-4">
+						<div>
+							<img class="h-auto w-full rounded-3xl" src="images/profile_pic.jpg" alt="Anton_James_Pic" />
+							<div class="text-center text-3xl font-bold">Anton James</div>
+						</div>
+						<div>
+							Software Engineer
+						</div>
+						<div class="flex flex-col">
+							<a href="#two" class="scrolly no-underline">Projects</a>
+							<a href="#four" class="scrolly">Skills</a>
 							<a href="#five" class="scrolly">Resume</a>
-						</header>
-						<span class="image"><img src="images/profile_pic.jpg" alt="profile_pic" /></span>
-						
+						</div>
+					</div>
+					<div>
+				
+					</div>
+					<div>
+				
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
+			
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
 					<span class="image fit main"><img src="images/nyc.jpg" alt="" /></span>
 					<div class="content">
 						<div class="container">
-							<!-- <div class="col-4 col-12-medium">
-								<header>
-									
-									<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
-								</header>
-							</div> -->
 							<div class="row">
 								<div class="col-4 col-12-medium">
 									<h2>About me</h2>
@@ -192,7 +175,6 @@
 					<div class="content">
 						<header>
 							<h2>Torque</h2>
-							<!-- <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p> -->
 						</header>
 						<p>Torque is a fast-paced racing game inspired by the 80s arcade classics</p>
 						<ul class="actions">
