@@ -49,7 +49,6 @@ function init() {
 
 function animate() {
     // Update star positions based on time
-    const time = Date.now() * 0.00005;
 
     const starPositions = starGeo.attributes.position.array;
     for (let i = 2, l = starPositions.length; i < l; i += 3) {
@@ -57,7 +56,7 @@ function animate() {
 
         // Check if the star is behind the camera
         if (starPositions[i] > 300) {
-            starPositions[i] = -300; // Reset the star position in front of the camera
+            starPositions[i] = -200; // Reset the star position in front of the camera
         }
     }
 
