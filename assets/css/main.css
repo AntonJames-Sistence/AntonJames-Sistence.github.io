@@ -4281,10 +4281,7 @@ input, select, textarea {
 	font-style: italic;
 	font-size: 18px;
 }
-.flex {
-	display: flex;
-	justify-content: space-between;
-}
+
 
 .space {
 	height: 40px;
@@ -4305,11 +4302,13 @@ canvas {
 .with-shadow:hover {
 	box-shadow: 0 0 20px red;
 	scale: 1.1;
-	z-index: 20;
 	cursor: pointer;
-	/* overflow: visible; */
+	overflow: visible;
 }
 
 #imageContainer {
 	/* border: white solid 2px; */
+	/* overflow: auto; */
+	/* white-space: nowrap; */
+	height: 140%;
 }
