@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const imageContainer = document.getElementById("imageContainer");
-    let scrollAmount = 300; // Adjust this value as needed
+    let scrollAmount = 329; // Adjust this value as needed
     let scrolling = false;
 
     const scrollLeftButton = document.getElementById("scrollLeft");
