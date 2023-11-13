@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     let screenHeight = window.innerHeight;
-    let scrollThreshold = screenHeight * 1.5;
+    let scrollThreshold = screenHeight * 1;
 
     if (window.scrollY > scrollThreshold) {
       scrollArrow.style.opacity = "1";
