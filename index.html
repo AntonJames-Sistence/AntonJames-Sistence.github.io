@@ -63,7 +63,7 @@
 						</div>
 					</div>
 					<div class="flex flex-col w-2/5 justify-between mb-16 mt-8">
-						<div class="font-bold text-xl">
+						<div class="font-bold text-lg">
 							As a seasoned Software Engineer, I hold a Master's degree in 
 							Computer Science and Mathematics. I'm also a proud alumni of the 
 							illustrious App Academy, renowned as one of the most 
@@ -71,22 +71,36 @@
 							My career has been enriched by a spectrum of skills, including but not 
 							limited to technical prowess, effective communication, and a knack for 
 							problem-solving.<br> I look forward to taking on new challenges and continuing to 
-							excel in the ever-evolving world of software engineering. <br> <br> Check out my latest projects
+							excel in the ever-evolving world of software engineering.
 						</div>
-						<div class="grid grid-cols-2 gap-4">
-							<div>
-								<img src="images/steamer_screenshot.png" class="rounded-xl"></img>
-							</div>
-							<div>
-								<img src="images/steamer_screenshot.png" class="rounded-xl"></img>
-							</div>
-							<div>
-								<img src="images/steamer_screenshot.png" class="rounded-xl"></img>
-							</div>
-							<div>
-								<img src="images/steamer_screenshot.png" class="rounded-xl"></img>
+
+						<div class="flex flex-col">
+							<div class="self-center text-2xl font-bold pb-4">Check out my latest projects</div>
+							<div class="flex flex-row">
+								<div class="relative flex justify-center">
+									<button class="text-white-600 hover:text-red-600 text-4xl bg-transparent" id="scrollLeft">←</button>
+								</div>
+								<div class="w-full flex flex-row overflow-x-auto" id="imageContainer">
+									  
+										<img src="images/steamer_screenshot.png" class="w-1/2 h-auto mr-4  with-shadow" />
+									  
+									  
+										<img src="images/itinerator_screenshot.png" class="w-1/2 h-auto mr-4  with-shadow" />
+									  
+									  
+										<img src="images/torque_screenshot.png" class="w-1/2 h-auto mr-4  with-shadow" />
+									  
+									  
+										<img src="images/steamer_screenshot.png" class="w-1/2 h-auto  with-shadow" />
+									  
+								</div>
+								  
+								<div class="relative flex justify-center">
+									<button class="text-white-600 hover:text-red-600 text-4xl bg-transparent" id="scrollRight">→</button>
+								</div>
 							</div>
 						</div>
+						
 					</div>
 					<div class="w-1/6 mt-8 mr-8">
 						<div class="text-center text-4xl font-bold mb-10">Skills</div>
@@ -120,7 +134,7 @@
 								<h3 class="text-center font-bold text-sm">Tailwind</h3>
 							</div>
 							<div class="h-auto w-16">
-								<img src="images/skills/ruby.png" class=""></img>
+								<img src="images/skills/rails.png" class=""></img>
 								<h3 class="text-center font-bold text-sm">Ruby on Rails</h3>
 							</div>
 							<div class="h-auto w-16">
@@ -153,7 +167,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
+					<!-- <a href="#one" class="goto-next scrolly">Next</a> -->
 				</section>
 			
 
@@ -347,7 +361,7 @@
 									<h3>SQL</h3>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/pngegg.png" class="icon solid alt major fa-lock"></img>
+									<img src="images/skills/postgresql.png" class="icon solid alt major fa-lock"></img>
 									<h3>PostgreSQL</h3>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
@@ -434,6 +448,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/script.js"></script>
+			<script src="assets/js/projectScroll.js"></script>
 			<script type="module" src="./assets/js/stars.js"></script>
 	</body>
 </html>

@@ -17,7 +17,7 @@ const init = () => {
     const positions = [];
     const colors = [];
 
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 20000; i++) {
         const x = Math.random() * 500 - 300;
         const y = Math.random() * 500 - 300;
         const z = Math.random() * 500 - 300;
