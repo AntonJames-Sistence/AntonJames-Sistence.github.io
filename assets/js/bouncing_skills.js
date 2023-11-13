@@ -1,20 +1,25 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
 let scene, camera, renderer, icons;
 
 const skillIcons = [
-  './images/skills/next.png',
-  './images/skills/python.png',
-  './images/skills/react.png',
+  "./images/skills/next.png",
+  "./images/skills/python.png",
+  "./images/skills/react.png",
   // Add more skill icons as needed
 ];
 
-const bannerContainer = document.getElementById('three-banner');
+const bannerContainer = document.getElementById("three-banner");
 
 const init = () => {
   scene = new THREE.Scene();
 
-  camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+  camera = new THREE.PerspectiveCamera(
+    60,
+    window.innerWidth / window.innerHeight,
+    1,
+    1000,
+  );
   camera.position.z = 1;
 
   renderer = new THREE.WebGLRenderer();
@@ -72,6 +77,6 @@ window.onload = () => {
   init();
 
   // Select the #three-banner element and append the renderer's domElement to it
-//   const bannerContainer = document.getElementById('three-banner');
+  //   const bannerContainer = document.getElementById('three-banner');
   bannerContainer.appendChild(renderer.domElement);
 };
