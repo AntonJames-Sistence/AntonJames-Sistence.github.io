@@ -4410,13 +4410,6 @@ body.is-touch #banner {
   }
 }
 
-#skills {
-  width: 25%;
-}
-
-#skills > h3 {
-  line-height: 0.9em;
-}
 
 @media screen and (max-width: 480px) {
   #skills {
