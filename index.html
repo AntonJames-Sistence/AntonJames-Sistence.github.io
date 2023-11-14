@@ -13,6 +13,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.tailwindcss.com"></script>
 		<script type="importmap">
 			{
 			  "imports": {
@@ -22,158 +23,198 @@
 			}
 		</script>
 	</head>
-	<body class="is-preload landing">
+	<!-- add landing class to body if you need spinner -->
+	<body class="is-preload  bg-transparent"> 
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
-					<!-- <h1 id="logo"><a href="index.html">Home</a></h1> -->
+				<!-- <header id="header">
 					<nav id="nav">
 						<ul>
-							<!-- <li><a href="index.html">Home</a></li> -->
-							
 							<li>
-								<!-- <a class="nav-drop-button">Tech Profiles</a> -->
 								<li><a href="https://www.linkedin.com/in/anton-james-ja/" target="_blank" class="nav-header">LinkedIn</a></li>
 								<li><a href="https://github.com/AntonJames-Sistence/" target="_blank" class="nav-header">GitHub</a></li>
 								<li><a href="https://wellfound.com/u/anton-james/" target="_blank" class="nav-header">Wellfound</a></li>
-								<!-- <ul>
-									<li><a href="https://www.linkedin.com/in/anton-james-ja/" target="_blank">LinkedIn</a></li>
-									<li><a href="https://github.com/AntonJames-Sistence/" target="_blank">GitHub</a></li>
-									<li><a href="https://wellfound.com/u/anton-james/" target="_blank">Wellfound</a></li>
-									<li>
-										<a href="#two" class="scrolly">My Projects</a>
-										<ul>
-											<li><a href="https://steamer-9bo7.onrender.com/" target="_blank">Steamer</a></li>
-											<li><a href="https://excursionexplorer.onrender.com/" target="_blank">Itinerator</a></li>
-											<li><a href="https://antonjames-sistence.github.io/Torque/" target="_blank">Torque</a></li>
-										</ul>
-									</li>
-								</ul> -->
 							</li>
-							<!-- <li><a href="elements.html">Elements</a></li> -->
-							<!-- <li><a href="#" class="button primary">Sign Up</a></li> -->
 						</ul>
 					</nav>
-				</header>
+				</header> -->
 
 				<div class="scroll-arrow" id="scrollArrow">
 					<span class="arrow"><i class="fa-solid fa-arrow-up"></i></span>
 				</div>
 
 			<!-- Banner -->
-				<section id="banner">
-					<!-- Three.js renderer element will be added here -->
-					<div class="content">
-						<header>
-							<h2>Anton James</h2>
-							<p>
-								Software Engineer
-							</p>
-							<a href="#two" class="scrolly">Projects</a> |
-							<a href="#four" class="scrolly">Skills</a> |
-							<a href="#five" class="scrolly">Resume</a>
-						</header>
-						<span class="image"><img src="images/profile_pic.jpg" alt="profile_pic" /></span>
+				<section class="w-full h-screen flex flex-row justify-between">
+					<div id="three-banner" class="absolute -z-10 w-screen h-screen">
+					</div>
+					<div class="w-1/5 flex flex-col space-between mt-8 ml-8 justify-between">
+						<div>
+							<img class="h-auto w-3/4 rounded-3xl" src="images/profile_pic.jpg" alt="Anton_James_Pic" />
+							<div class="text-center text-5xl font-bold">Anton James</div>
+							<div class="text-end text-xl font-bold italic">Software Engineer</div>
+						</div>
+						<div class="flex flex-col m-16 text-2xl">
+							<a href="#blue-yellow" class="scrolly">Projects</a>
+							<a href="#skills" class="scrolly">Skills</a>
+							<a href="#resume" class="scrolly">Resume</a>
+							<a href="#about-me" class="scrolly">About me</a>
+							<a href="#footer" class="scrolly">Contact me</a>
+						</div>
+					</div>
+					<div class="flex flex-col w-1/2 justify-between mb-16 mt-8">
+						<div class="font-bold text-lg">
+							As a seasoned Software Engineer, I hold a Master's degree in 
+							Computer Science and Mathematics. I'm also a proud alumni of the 
+							illustrious App Academy, renowned as one of the most 
+							prestigious SWE bootcamps in the United States.  
+							My career has been enriched by a spectrum of skills, including but not 
+							limited to technical prowess, effective communication, and a knack for 
+							problem-solving.<br><br> I look forward to taking on new challenges and continuing to 
+							excel in the ever-evolving world of software engineering.
+						</div>
+
+						<div class="flex flex-col">
+							<div class="self-center text-2xl font-bold pb-4">Check out my latest projects</div>
+							
+							<div class="flex flex-row">
+								<!-- <div class="relative flex justify-center mr-2">
+									<button class="text-white-600 hover:text-red-600 text-4xl bg-transparent" id="scrollLeft">←</button>
+								</div> -->
+								<div class="flex flex-row overflow-x-auto w-full justify-around items-center" id="imageContainer">
+
+									<a href="#blue-yellow" class="scrolly inline-block h-[100px] w-[160px] with-shadow-yellow rounded-xl" style="background: url('images/blueyellow_screenshot.png') center center / cover no-repeat;"></a>
+									<a href="#itinerator" class="scrolly inline-block h-[100px] w-[160px]  with-shadow-dark-yellow rounded-xl" style="background: url('images/itinerator_screenshot.png') center center / cover no-repeat;"></a>
+									<a href="#steamer" class="scrolly inline-block h-[100px] w-[160px]  with-shadow-blue rounded-xl" style="background: url('images/steamer_screenshot.png') center center / cover no-repeat;"></a>
+									<a href="#torque" class="scrolly inline-block h-[100px] w-[160px]  with-shadow-purple rounded-xl" style="background: url('images/torque_screenshot.png') center center / cover no-repeat;"></a>
+  
+								</div>
+								<!-- <div class="relative flex justify-center ml-2">
+									<button class="text-white-600 hover:text-red-600 text-4xl bg-transparent " id="scrollRight">→</button>
+								</div> -->
+							</div>
+
+						</div>
 						
 					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/nyc.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<!-- <div class="col-4 col-12-medium">
-								<header>
-									
-									<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
-								</header>
-							</div> -->
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<h2>About me</h2>
-									<p>
-										My journey in tech began with the completion of a Master's degree in Mathematics and Computer Science. 
-										This was followed by two years of experience as a computer science teacher. In 2018, motivated by my 
-										desire for new opportunities and personal growth, I relocated to New York City.
-									</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>
-										Motivated to explore a new culture, I took on a part-time position at a local restaurant while freelancing.
-										This unique experience sharpened my soft skills, and provided 
-										valuable insights into client-oriented businesses. After the pandemic, I was eager to further enhance my 
-										skills at App Academy, one of the country's most renowned software engineering bootcamps.
-									</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>
-										Throughout my journey, I've discovered that I have an enthusiastic, diligent, and persistent nature. 
-										My passion for making a meaningful impact drives me. If you're looking for a dedicated front-end software 
-										engineer, I'd be happy to connect and discuss how I can contribute to your project.
-									</p>
-								</div>
+					<div class="w-1/6 mt-8 mr-8">
+						<div class="text-center text-4xl font-bold mb-10">Skills</div>
+						<div class="grid grid-cols-3 gap-4">
+							<div class="h-auto w-14">
+								<img src="images/skills/js.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">JavaScript</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/html.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">HTML</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/css.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">CSS</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/react.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">React.js</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/redux.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">Redux</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/next.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">Next.js</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/tailwind.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">Tailwind</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/rails.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">Ruby on Rails</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/postgresql.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">PostgreSQL</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/mongo.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">MongoDB</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/git.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">Git</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/python.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">Python</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/aws.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">AWS S3</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/rest2.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">REST API</h3>
+							</div>
+							<div class="h-auto w-14">
+								<img src="images/skills/openai.png" class=""></img>
+								<h3 class="text-center font-bold text-sm">OpenAI</h3>
 							</div>
 						</div>
-						<h2 id="projects">My Projects</h2>
 					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
+					<!-- <a href="#blue-yellow" class="goto-next scrolly">Next</a> -->
 				</section>
+			
 
-			<!-- project one -->
-				<section id="two" class="spotlight style1 right">
-					<span class="image fit main"><img src="images/steamer_screenshot.png" alt="steamer_project" /></span>
+			<!-- project blue-yellow -->
+				<section id="blue-yellow" class="spotlight style4 right">
+					<span class="image fit main"><img src="images/blueyellow_screenshot.png" alt="blue&yellow_project" /></span>
 					
-					<div class="content">
-						<header>
-							<h2>Steamer</h2>
-							<!-- <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p> -->
-						</header>
-						<p>Steamer is an online game store, user-friendly platform designed for browsing and purchasing games</p>
-						<ul class="actions">
-							<li><a href="https://steamer-9bo7.onrender.com/" class="button button-link-blue" target="_blank">Live Link</a></li>
-							<li><a href="https://github.com/AntonJames-Sistence/Steamer/" class="button button-link-blue" target="_blank">GitHub Repo</a></li>
-						</ul>
+					<div class="content flex flex-col justify-between">
 						<div>
-							<p class="tech-text">Technologies used:</p>
-							<p class="blue-text">
-								JavaScript<br>
-								React.js<br>
-								Redux<br>
-								HTML / CSS<br>
-								Node.js<br>
-								Ruby on Rails<br>
-								JSON / RESTful API<br>
-								PostgreSQL
-							</p>
+							<h2 class="text-3xl font-bold">Blue & Yellow</h2>
+							<p>Nonprofit volunteer website for collecting donations to aid those affected by the war in Ukraine</p>
 						</div>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- project two -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/itinerator_screenshot.png" alt="itinerator_project" /></span>
-					<div class="content">
-						<header>
-							<h2>Itenerator</h2>
-							<!-- <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p> -->
-						</header>
-						<p>Collaborative project aimed at enhancing people's travel experiences by providing meaningful leisure and activity offers</p>
-						<ul class="actions">
-							<li><a href="https://excursionexplorer.onrender.com/" class="button button-link-yellow" target="_blank">Live Link</a></li>
-							<li><a href="https://github.com/dtannyc1/itinerator/" class="button button-link-yellow" target="_blank">GitHub Repo</a></li>
+						<ul class="actions justify-self-center">
+							<li><a href="https://blue-yellow-foundation.vercel.app/" class="button button-link-yellow" target="_blank">Live Link</a></li>
+							<li><a href="https://github.com/AntonJames-Sistence/BlueYellowTeam" class="button button-link-yellow" target="_blank">GitHub Repo</a></li>
 						</ul>
 						<div>
 							<p class="tech-text">Technologies used:</p>
 							<p class="yellow-text">
 								JavaScript<br>
 								React.js<br>
+								HTML / CSS<br>
+								Tailwind CSS<br>
+								Next.js<br>
+								Firebase<br>
+								Stripe API<br>
+								Eventbrite API
+							</p>
+						</div>
+					</div>
+					<a href="#itinerator" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- project itinerator -->
+				<section id="itinerator" class="spotlight style3 left">
+					<span class="image fit main bottom"><img src="images/itinerator_screenshot.png" alt="itinerator_project" /></span>
+					<div class="content flex flex-col justify-between">
+						<div>
+							<h2 class="text-3xl font-bold">Itenerator</h2>
+							<p>Website aimed at enhancing people's travel experiences by offering meaningful leisure and activity options</p>
+						</div>
+						<ul class="actions">
+							<li><a href="https://excursionexplorer.onrender.com/" class="button button-link-dark-yellow" target="_blank">Live Link</a></li>
+							<li><a href="https://github.com/dtannyc1/itinerator/" class="button button-link-dark-yellow" target="_blank">GitHub Repo</a></li>
+						</ul>
+						<div>
+							<p class="tech-text">Technologies used:</p>
+							<p class="dark-yellow-text">
+								JavaScript<br>
+								React.js<br>
 								Redux<br>
 								HTML / CSS<br>
-								Node.js<br>
 								Express.js<br>
 								JSON / RESTful API<br>
 								MongoDB<br>
@@ -181,19 +222,48 @@
 							</p>
 						</div>
 					</div>
-					<a href="#three-half" class="goto-next scrolly">Next</a>
+					<a href="#steamer" class="goto-next scrolly">Next</a>
 				</section>
 
-			<!-- project three -->
+			<!-- project steamer -->
+			<section id="steamer" class="spotlight style1 right">
+				<span class="image fit main"><img src="images/steamer_screenshot.png" alt="steamer_project" /></span>
+				
+				<div class="content flex flex-col justify-between">
+					<div>
+						<h2 class="text-3xl font-bold">Steamer</h2>
+						<p>Online video game store, an e-commerce platform designed for browsing and purchasing video games</p>
+					</div>
+					<ul class="actions">
+						<li><a href="https://steamer-9bo7.onrender.com/" class="button button-link-blue" target="_blank">Live Link</a></li>
+						<li><a href="https://github.com/AntonJames-Sistence/Steamer/" class="button button-link-blue" target="_blank">GitHub Repo</a></li>
+					</ul>
+					<div>
+						<p class="tech-text">Technologies used:</p>
+						<p class="blue-text">
+							JavaScript<br>
+							React.js<br>
+							Redux<br>
+							HTML / CSS<br>
+							Ruby on Rails<br>
+							JSON / RESTful API<br>
+							PostgreSQL<br>
+							AWS S3
+						</p>
+					</div>
+				</div>
+				<a href="#torque" class="goto-next scrolly">Next</a>
+			</section>
 
-				<section id="three-half" class="spotlight style2 right">
+			<!-- project torque -->
+
+				<section id="torque" class="spotlight style2 left">
 					<span class="image fit main"><img src="images/torque_screenshot.png" alt="steamer_project" /></span>
-					<div class="content">
-						<header>
-							<h2>Torque</h2>
-							<!-- <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p> -->
-						</header>
-						<p>Torque is a fast-paced racing game inspired by the 80s arcade classics</p>
+					<div class="content flex flex-col justify-between">
+						<div>
+							<h2 class="text-3xl font-bold">Torque</h2>
+							<p>Fast-paced racing game inspired by the 80s arcade classics</p>
+						</div>
 						<ul class="actions">
 							<li><a href="https://antonjames-sistence.github.io/Torque/" class="button button-link-purple" target="_blank">Live Link</a></li>
 							<li><a href="https://github.com/AntonJames-Sistence/Torque/" class="button button-link-purple" target="_blank">GitHub Repo</a></li>
@@ -209,148 +279,183 @@
 							</p>
 						</div>
 					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
+					<a href="#about-me" class="goto-next scrolly">Next</a>
 				</section>
 
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
+			<!-- One -->
+			<section id="about-me" class="spotlight style1 bottom">
+				<span class="image fit main"><img src="images/nyc.jpg" alt="" /></span>
+				<div class="content h-1/2">
 					<div class="container">
-						<header class="major">
-							<h2>Programming Skills</h2>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform" id="flex-center">
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/js.png" class="icon solid alt major fa-flask"></img>
-									<h3>Java Script</h3>
-								</section>
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/typescript.png" class="icon solid alt major fa-flask"></img>
-									<h3>Type Script</h3>
-								</section> -->
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/react.png" class="icon solid alt major fa-paper-plane"></img>
-									<h3>React</h3>
-								</section>
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/next.png" class="icon solid alt major fa-paper-plane"></img>
-									<h3>Next.js</h3>
-								</section> -->
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/redux.png" class="icon solid alt major fa-file"></img>
-									<h3>Redux</h3>
-								</section>
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/ruby.png" class="icon solid alt major fa-lock"></img>
-									<h3>Ruby</h3>
-								</section> -->
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/rails.png" class="icon solid alt major fa-lock"></img>
-									<h3>Ruby on Rails</h3>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/html.png" class="icon solid alt major fa-chart-area"></img>
-									<h3>HTML</h3>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/css.png" class="icon solid alt major fa-comment"></img>
-									<h3>CSS</h3>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/git.png" class="icon solid alt major fa-lock"></img>
-									<h3>Git</h3>
-								</section>
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/node.png" class="icon solid alt major fa-lock"></img>
-									<h3>Node.js</h3>
-								</section> -->
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/python.png" class="icon solid alt major fa-lock"></img>
-									<h3>Python</h3>
-								</section> -->
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/webpack.png" class="icon solid alt major fa-lock"></img>
-									<h3>Webpack</h3>
-								</section> -->
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/sql.png" class="icon solid alt major fa-lock"></img>
-									<h3>SQL</h3>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/pngegg.png" class="icon solid alt major fa-lock"></img>
-									<h3>PostgreSQL</h3>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/mongo2.png" class="icon solid alt major fa-lock"></img>
-									<h3>MongoDB</h3>
-								</section>
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/algorithm.png" class="icon solid alt major fa-lock"></img>
-									<h3>Algorithms</h3>
-								</section> -->
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/data.png" class="icon solid alt major fa-lock"></img>
-									<h3>Data Structures</h3>
-								</section> -->
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/aws.png" class="icon solid alt major fa-lock"></img>
-									<h3>AWS S3</h3>
-								</section>
-								<!-- <section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/REST.png" class="icon solid alt major fa-lock" alt="google_maps_api_skill"></img>
-									<h3>RESTful API</h3>
-								</section> -->
-								<section class="col-4 col-6-medium col-12-xsmall" id="skills">
-									<img src="images/skills/openai.png" class="icon solid alt major fa-lock" alt="google_maps_api_skill"></img>
-									<h3>OpenAI API</h3>
-								</section>
+						<div class="flex flex-row justify-around w-full">
+							<!-- <div> -->
+								<h2 class="text-3xl fixed top-4 font-bold ">About me</h2>
+								<!-- <div class="line"></div> -->
+							<!-- </div> -->
+							<div class="w-2/6 mx-10">
+								<p>
+									My journey in tech began with the completion of a Master's degree in Mathematics and Computer Science. 
+									This was followed by two years of experience as a computer science teacher. In 2018, motivated by my 
+									desire for new opportunities and personal growth, I relocated to New York City.
+								</p>
+							</div>
+							<div class="w-2/6 mx-10">
+								<p>
+									Motivated to explore a new culture, I took on a part-time position at a local restaurant while freelancing.
+									This unique experience sharpened my soft skills, and provided 
+									valuable insights into client-oriented businesses. After the pandemic, I was eager to further enhance my 
+									skills at App Academy, one of the country's most renowned software engineering bootcamps.
+								</p>
+							</div>
+							<div class="w-2/6 mx-10">
+								<p>
+									Throughout my journey, I've discovered that I have an enthusiastic, diligent, and persistent nature. 
+									My passion for making a meaningful impact drives me. If you're looking for a dedicated front-end software 
+									engineer, I'd be happy to connect and discuss how I can contribute to your project.
+								</p>
 							</div>
 						</div>
-						
 					</div>
-				</section>
-				<!-- <section class="wrapper style1 special fade">
-					<a href="#five" id="scroll-button-margin" class="goto-next scrolly">Next</a>
-				</section> -->
-				<!-- Five -->
-				<section id="five" class="wrapper style1 special fade">
-					<div class="container">
-						<header>
-							<h2><a href="./assets/Anton_James_CV.pdf" target="_blank" class="red-hover">Download resume</a></h2>
-							<div class="line"></div>
-						</header>
-						<div class="pdf-container">
-							<iframe id="resume" src="./assets/Anton_James_CV.pdf#toolbar=0" width="100%" height="100%" allowtransparency = "true"></iframe>
-						</div>
+					
+				</div>
+				<a href="#skills" class="goto-next scrolly">Next</a>
+			</section>
+
+			<!-- Four -->
+			<section id="skills" class="wrapper style1 special fade-up">
+				<div class="container w-screen">
+					<header class="major">
+						<h2 class="font-bold text-4xl">Technical Skills</h2>
+					</header>
+						<div class="grid grid-cols-5 gap-8">
+							<div>
+								<img src="images/skills/js.png" class="icon solid alt major fa-flask"></img>
+								<h3>Java Script</h3>
+							</div>
+							<div>
+								<img src="images/skills/typescript.png" class="icon solid alt major fa-flask"></img>
+								<h3>Type Script</h3>
+							</div>
+							<div class="" id="">
+								<img src="images/skills/react.png" class="icon solid alt major fa-paper-plane"></img>
+								<h3>React</h3>
+							</div>
+							<div>
+								<img src="images/skills/redux.png" class="icon solid alt major fa-file"></img>
+								<h3>Redux</h3>
+							</div>
+							<div>
+								<img src="images/skills/next.png" class="icon solid alt major fa-paper-plane"></img>
+								<h3>Next.js</h3>
+							</div>
+							<div>
+								<img src="images/skills/rails.png" class="icon solid alt major fa-lock"></img>
+								<h3>Ruby on Rails</h3>
+							</div>
+							<div>
+								<img src="images/skills/html.png" class="icon solid alt major fa-chart-area"></img>
+								<h3>HTML</h3>
+							</div>
+							<div>
+								<img src="images/skills/css.png" class="icon solid alt major fa-comment"></img>
+								<h3>CSS</h3>
+							</div>
+							<div>
+								<img src="images/skills/tailwind.png" class="icon solid alt major fa-comment"></img>
+								<h3>Tailwind</h3>
+							</div>
+							<div>
+								<img src="images/skills/git.png" class="icon solid alt major fa-lock"></img>
+								<h3>Git</h3>
+							</div>
+							<div>
+								<img src="images/skills/node.png" class="icon solid alt major fa-lock"></img>
+								<h3>Node.js</h3>
+							</div>
+							<div>
+								<img src="images/skills/python.png" class="icon solid alt major fa-lock"></img>
+								<h3>Python</h3>
+							</div>
+							<div>
+								<img src="images/skills/webpack.png" class="icon solid alt major fa-lock"></img>
+								<h3>Webpack</h3>
+							</div>
+							<div>
+								<img src="images/skills/sql.png" class="icon solid alt major fa-lock"></img>
+								<h3>SQL</h3>
+							</div>
+							<div>
+								<img src="images/skills/postgresql.png" class="icon solid alt major fa-lock"></img>
+								<h3>PostgreSQL</h3>
+							</div>
+							<div>
+								<img src="images/skills/mongo2.png" class="icon solid alt major fa-lock"></img>
+								<h3>MongoDB</h3>
+							</div>
+							<div>
+								<img src="images/skills/algorithm.png" class="icon solid alt major fa-lock"></img>
+								<h3>Algorithms</h3>
+							</div>
+							<!-- <div>
+								<img src="images/skills/data.png" class="icon solid alt major fa-lock"></img>
+								<h3>Data Structures</h3>
+							</div> -->
+							<div>
+								<img src="images/skills/aws.png" class="icon solid alt major fa-lock"></img>
+								<h3>AWS S3</h3>
+							</div>
+							<div>
+								<img src="images/skills/REST.png" class="icon solid alt major fa-lock" alt="google_maps_api_skill"></img>
+								<h3>RESTful API</h3>
+							</div>
+							<div>
+								<img src="images/skills/openai.png" class="icon solid alt major fa-lock" alt="google_maps_api_skill"></img>
+								<h3>OpenAI API</h3>
+							</div>
 					</div>
-				</section>
+					
+				</div>
+
+				<a href="#resume" class="goto-next scrolly">Next</a>
+			</section>
+			<!-- Five -->
+			<section id="resume" class="style1 special fade">
+				<div class="container">
+					<header>
+						<h2 class="text-3xl font-bold"><a href="./assets/Anton_James_CV.pdf" target="_blank" class="red-hover ">Download resume</a></h2>
+						<div class="line"></div>
+					</header>
+					<div class="pdf-container overflow-hidden">
+						<iframe id="resume" src="./assets/Anton_James_CV.pdf#toolbar=0" width="100%" height="100%" scrolling="no" class="overflow-hidden" allowtransparency="true"></iframe>
+					</div>
+				</div>
+			</section>
 
 			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li>
-							<a href="https://www.linkedin.com/in/anton-james-ja/" class="icon brands alt fa-linkedin-in" target="_blank">
-								<span class="label">LinkedIn</span>
-							</a>
-							</li>
-						<li>
-							<a href="https://github.com/AntonJames-Sistence" class="icon brands alt fa-github" target="_blank">
-								<span class="label">GitHub</span>
-							</a>
-							</li>
-						<li>
-							<a href="https://wellfound.com/u/anton-james" class="icon brands alt fa-angellist" target="_blank">
-								<span class="label">Wellfound</span>
-							</a>
+			<footer class="my-8" id="footer">
+				<ul class="icons">
+					<li>
+						<a href="https://www.linkedin.com/in/anton-james-ja/" class="icon brands alt fa-linkedin-in" target="_blank">
+							<span class="label">LinkedIn</span>
+						</a>
 						</li>
-						<li>
-							<a href="mailto:anton.james.ja@gmail.com" class="icon solid alt fa-envelope" target="_blank">
-								<span class="label">Email</span>
-							</a>
+					<li>
+						<a href="https://github.com/AntonJames-Sistence" class="icon brands alt fa-github" target="_blank">
+							<span class="label">GitHub</span>
+						</a>
 						</li>
-					</ul>
-				</footer>
-				<div class="space"></div>
+					<li>
+						<a href="https://wellfound.com/u/anton-james" class="icon brands alt fa-angellist" target="_blank">
+							<span class="label">Wellfound</span>
+						</a>
+					</li>
+					<li>
+						<a href="mailto:anton.james.ja@gmail.com" class="icon solid alt fa-envelope" target="_blank">
+							<span class="label">Email</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
 
 		</div>
 
@@ -363,7 +468,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/script.js"></script>
-			<script type="module" src="./assets/js/three.js"></script>
+			<script src="assets/js/scrollToTop.js"></script>
+			<!-- <script src="assets/js/projectScroll.js"></script> -->
+			<script type="module" src="./assets/js/stars.js"></script>
 	</body>
 </html>

@@ -1,9 +1,9 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
-@import 'libs/html-grid';
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/vendor";
+@import "libs/breakpoints";
+@import "libs/html-grid";
 
 /*
 	Landed by HTML5 UP
@@ -13,21 +13,18 @@
 
 /* Loader */
 
-	body.landing {
+body.landing {
+  &.is-preload {
+    // Spinner (active)
 
-		&.is-preload {
+    &:before {
+      display: none;
+    }
 
-			// Spinner (active)
+    // Overlay (active)
 
-				&:before {
-					display: none;
-				}
-
-			// Overlay (active)
-
-				&:after {
-					display: none;
-				}
-
-		}
-	}
+    &:after {
+      display: none;
+    }
+  }
+}
