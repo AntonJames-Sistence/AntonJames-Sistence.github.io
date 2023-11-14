@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function scrollToTop() {
     // Smooth scrolling animation
-    let scrollStep = -window.scrollY / 40;
+    let scrollStep = -window.scrollY / 60;
     let scrollInterval = setInterval(function () {
       if (window.scrollY !== 0) {
         window.scrollBy(0, scrollStep);
