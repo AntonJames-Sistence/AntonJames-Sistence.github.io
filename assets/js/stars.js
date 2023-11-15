@@ -22,7 +22,7 @@ const init = () => {
   const positions = [];
   const colors = [];
 
-  for (let i = 0; i < 20000; i++) {
+  for (let i = 0; i < 15000; i++) {
     const x = Math.random() * 500 - 300;
     const y = Math.random() * 500 - 300;
     const z = Math.random() * 500 - 300;
@@ -64,8 +64,8 @@ const animate = () => {
   stars.position.z = camera.position.z - 100;
 
   // Rotate the stars
-  stars.rotation.x += 0.0015;
-  stars.rotation.y += 0.0015;
+  stars.rotation.x += 0.0010;
+  stars.rotation.y += 0.0010;
 
   const positions = starGeo.getAttribute("position");
   positions.needsUpdate = true;
