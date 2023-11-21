@@ -4529,7 +4529,7 @@ canvas {
 .with-shadow-dark-yellow:hover,
 .with-shadow-purple:hover {
   box-shadow: 0 0 20px red;
-  scale: 1.1;
+  scale: 1.2;
   cursor: pointer;
 }
 
