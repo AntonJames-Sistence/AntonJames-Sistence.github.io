@@ -2297,7 +2297,7 @@ header h6 + p {
 }
 
 header.major {
-  margin: 0 0 2em 0;
+  /* margin: 0 0 2em 0; */
   position: relative;
   text-align: center;
 }
@@ -2306,10 +2306,11 @@ header.major:after,
 .line {
   background: #e44c65;
   content: "";
-  display: inline-block;
+  display: flex;
   height: 0.2em;
-  max-width: 80em;
-  width: 95%;
+  width: 90vw;
+  /* justify-self: center; */
+  margin-right: 20px;
 }
 
 footer.major {
