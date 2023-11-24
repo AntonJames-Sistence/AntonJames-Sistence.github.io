@@ -2308,9 +2308,9 @@ header.major:after,
   content: "";
   display: flex;
   height: 0.2em;
-  width: 90vw;
+  width: 100vw;
   /* justify-self: center; */
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 footer.major {
