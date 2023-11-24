@@ -2308,7 +2308,7 @@ header.major:after,
   content: "";
   display: flex;
   height: 0.2em;
-  width: 100vw;
+  width: 100%;
   /* justify-self: center; */
   /* margin-right: 20px; */
 }
@@ -4412,7 +4412,7 @@ body.is-touch #banner {
 }
 
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   #skills {
     width: 25%;
   }
@@ -4421,7 +4421,7 @@ body.is-touch #banner {
   #skills {
     width: 30%;
   }
-}
+} */
 
 .line {
   margin: 0 0 3em 0;
