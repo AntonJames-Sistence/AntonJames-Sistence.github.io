@@ -3907,7 +3907,7 @@ body.is-touch #banner {
     border-top-width: 0.35em !important;
     bottom: auto !important;
     left: auto !important;
-    padding: 4.5em 2.5em 2.5em 2.5em !important;
+    padding: 1em 2.5em 2.5em 2.5em !important;
     position: relative;
     right: auto !important;
     text-align: center;
@@ -3935,7 +3935,7 @@ body.is-touch #banner {
   /* Wrapper */
 
   .wrapper {
-    padding: 4.5em 2.5em 2.5em 2.5em;
+    padding: 1em 2em 1em 2em;
   }
 
   /* Banner */
