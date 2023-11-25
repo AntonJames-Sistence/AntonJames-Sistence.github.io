@@ -4309,7 +4309,7 @@ body.is-touch #banner {
   }
 
   .spotlight .content {
-    padding: 3em 1.25em 1em 1.25em !important;
+    padding: 1em 1.25em 1em 1.25em !important;
   }
 
   /* Wrapper */
@@ -4358,26 +4358,6 @@ body.is-touch #banner {
 }
 #projects {
   text-align: center;
-}
-
-.pdf-container {
-  height: 129vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-.pdf-container iframe {
-  position: relative;
-  width: 100vh;
-}
-
-/* Media query for screens smaller than or equal to 768px */
-@media screen and (max-width: 768px) {
-  .pdf-container {
-    height: 47.5vh;
-    width: 67.5vh;
-  }
 }
 
 /* Media query for screens smaller than or equal to 480px */
