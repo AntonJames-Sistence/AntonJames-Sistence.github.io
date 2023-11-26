@@ -4521,3 +4521,7 @@ canvas {
 #skills > .goto-next {
   position: relative;
 }
+
+.special-font {
+  font-family: 'MuseoModerno', sans-serif;
+}

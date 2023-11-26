@@ -12,6 +12,9 @@
 		<link rel="icon" type="image/x-icon" href="/images/portfolio.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script type="importmap">
@@ -52,20 +55,20 @@
 					<div class="w-1/2 ml-12 md:ml-0 md:w-full">
 						<img class="h-auto w-1/2 mt-1 self-center md:w-full lg:w-3/4 rounded-3xl" src="images/profile_pic.jpg" alt="Anton_James_Pic" />
 						<div class="md:text-center text-2xl md:text-2xl lg:text-5xl font-bold">Anton James</div>
-						<div class="text-center md:text-end text-sm md:text-base lg:text-xl font-bold italic">Software Engineer</div>
+						<div class="text-center md:text-end text-sm md:text-base lg:text-xl font-bold italic special-font">Software Engineer</div>
 					</div>
 
-					<div class="flex flex-col text-lg font-bold md:mt-24 lg:m-10 md:text-xl md:text-2xl">
-						<a href="#blue-yellow" class="scrolly">Projects</a>
-						<a href="#skills" class="scrolly">Skills</a>
+					<div class="flex flex-col text-lg font-bold md:mt-24 lg:m-10 md:text-xl md:text-2xl special-font">
+						<a href="#blue-yellow" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Projects</a>
+						<a href="#skills" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Skills</a>
 						<!-- <a href="#about-me" class="scrolly">About me</a> -->
-						<a href="#resume" class="scrolly">Resume</a>
-						<a href="#footer" class="scrolly w-full">Contact me</a>
+						<a href="#resume" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Resume</a>
+						<a href="#footer" class="scrolly w-full transition-transform duration-300 transform hover:translate-x-2">Contact me</a>
 					</div>
 				</div>
 
 				<div class="flex flex-col my-4 md:w-2/5 lg:w-1/2 lg:justify-between md:mb-16 md:mt-4 lg:mt-8">
-					<div class="font-bold text-sm md:text-base lg:text-lg mx-2">
+					<div class="text-sm md:text-base lg:text-lg mx-2 font-bold">
 						Seasoned Software Engineer with a Master's degree in Computer Science and Mathematics. 
 						Graduate of the renowned SWE bootcamp, App Academy, boasting an acceptance rate of 3%.   
 						My career has been enriched by a diverse skill set, including technical prowess, effective 
@@ -76,7 +79,7 @@
 					</div>
 
 					<div class="flex flex-col mt-0 md:mt-20 lg:mt-0 md:w-[95vw] lg:w-auto md:-ml-48 lg:ml-0">
-						<div class="self-center mt-2 md:mt-0 text-2xl md:text-2xl font-bold">My latest projects</div>
+						<div class="self-center mt-2 md:mt-0 text-2xl md:text-2xl lg:text-3xl font-bold special-font">My latest projects</div>
 						
 						<div class="md:flex md:flex-row w-full">
 							<!-- <div class="relative flex justify-center mr-2">
@@ -99,10 +102,10 @@
 					
 				</div>
 
-				<div class="h-auto w-1/4 lg:w-1/6 lg:mr-8 md:mr-4 md:mt-4 lg:mt-8">
-					<div class="text-center text-2xl md:text-4xl font-bold mb-4 md:mb-4 lg:mb-10">Skills</div>
+				<div class="h-auto w-1/4 lg:w-1/6 lg:mr-8 md:mr-4 md:mt-4 lg:mt-8 ">
+					<div class="text-center text-2xl md:text-4xl lg:text-3xl font-bold mb-4 md:mb-4 lg:mb-6 special-font">Skills</div>
 
-					<div class="grid grid-cols-5 place-items-center md:grid-cols-3 md:gap-2">
+					<div class="grid grid-cols-5 place-items-center md:grid-cols-3 md:gap-2 italic">
 						<div class="h-auto w-10 md:w-12 lg:w-14">
 							<img src="images/skills/js.png"></img>
 							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">JavaScript</h3>
@@ -175,7 +178,7 @@
 					
 					<div class="content flex flex-col justify-between font-bold">
 						<div>
-							<h2 class="text-3xl m-0">Blue & Yellow</h2>
+							<h2 class="text-3xl m-0 special-font">Blue & Yellow</h2>
 							<p>(Non-profit Donations Portal)</p>
 						</div>
 						
@@ -215,7 +218,7 @@
 					<span class="image fit main bottom"><img src="images/itinerator_screenshot.png" alt="itinerator_project" /></span>
 					<div class="content flex flex-col justify-between font-bold">
 						<div>
-							<h2 class="text-3xl m-0">Itenerator</h2>
+							<h2 class="text-3xl m-0 special-font">Itenerator</h2>
 							<p>(Personalized Activity Recommender)</p>
 						</div>
 
@@ -253,7 +256,7 @@
 				
 				<div class="content flex flex-col justify-between  font-bold">
 					<div>
-						<h2 class="text-3xl m-0">Steamer</h2>
+						<h2 class="text-3xl m-0 special-font">Steamer</h2>
 						<p>(Video Game Store)</p>
 					</div>
 
@@ -292,7 +295,7 @@
 					<span class="image fit main"><img src="images/torque_screenshot.png" alt="steamer_project" /></span>
 					<div class="content flex flex-col justify-between font-bold">
 						<div>
-							<h2 class="text-3xl m-0">Torque</h2>
+							<h2 class="text-3xl m-0 special-font">Torque</h2>
 							<p>(Fast-paced Racing Game)</p>
 						</div>
 
@@ -362,11 +365,11 @@
 			<section id="skills" class="wrapper style1 special fade-up w-screen">
 				<div class="container ">
 					<header class="flex flex-col justify-center">
-						<h2 class="flex w-full font-bold text-4xl justify-center">Technical Skills</h2>
+						<h2 class="flex w-full font-bold text-4xl justify-center special-font">Technical Skills</h2>
 						<div class="line my-4 md:my-8"></div>
 					</header>
 				
-					<div class="grid grid-cols-4 gap-8 place-items-center md:grid-cols-5 lg:grid-cols-4 mt-6 md:mt-0">
+					<div class="grid grid-cols-4 gap-8 place-items-center md:grid-cols-5 mt-6 md:mt-0 italic">
 						<div class="h-auto w-14 md:w-16">
 							<img src="images/skills/js.png"></img>
 							<h3 class="flex justify-center font-bold text-[12px] md:text-base">JavaScript</h3>
@@ -460,7 +463,7 @@
 						<h2 class="text-3xl font-bold">
 							<a 	href="./assets/Anton_James_CV2.pdf" 
 								target="_blank" 
-								class="hover:color-red flex w-full font-bold text-4xl justify-center">Download resume</a></h2>
+								class="hover:color-red flex w-full font-bold text-4xl justify-center  special-font">Download resume</a></h2>
 						<div class="line my-8"></div>
 					</header>
 
@@ -471,56 +474,35 @@
 			</section>
 
 			<!-- Footer -->
-			<footer class="my-8 flex justify-center" id="footer">
-				<!-- <ul class="icons">
-					<li>
-						<a href="https://www.linkedin.com/in/anton-james-ja/" class="icon brands alt fa-linkedin-in" target="_blank">
-							<span class="label">LinkedIn</span>
-						</a>
-						</li>
-					<li>
-						<a href="https://github.com/AntonJames-Sistence" class="icon brands alt fa-github" target="_blank">
-							<span class="label">GitHub</span>
-						</a>
-						</li>
-					<li>
-						<a href="https://wellfound.com/u/anton-james" class="icon brands alt fa-angellist" target="_blank">
-							<span class="label">Wellfound</span>
-						</a>
-					</li>
-					<li>
-						<a href="mailto:anton.james.ja@gmail.com" class="icon solid alt fa-envelope" target="_blank">
-							<span class="label">Email</span>
-						</a>
-					</li>
-				</ul> -->
-
-				<div>
-					<div class="h-auto w-10">
-						<a href="https://www.linkedin.com/in/anton-james-ja/" target="_blank">
-							<img src="images/icons/email.png"></img>
-						</a>
-						<span class="">Email</span>
-					</div>
-				</div>
-
-				<div>
-					<div class="h-auto w-10">
-						<a href="https://www.linkedin.com/in/anton-james-ja/" target="_blank">
-							<img src="images/icons/email.png"></img>
-						</a>
-						<span class="">Email</span>
-					</div>
-				</div>
+			<footer class="my-8 grid grid-cols-3 place-items-center italic special-font" id="footer">
 				
-				<div>
-					<div class="h-auto w-10">
-						<a href="https://www.linkedin.com/in/anton-james-ja/" target="_blank">
-							<img src="images/icons/email.png"></img>
+				<div class="hover:scale-125 ease-in-out duration-300 hover:text-red-500">
+					<div class="h-auto w-14">
+						<a href="mailto:anton.james.ja@gmail.com" target="_blank">
+							<img src="images/icons/email2.png"></img>
 						</a>
-						<span class="">Email</span>
+						<span class="flex justify-center font-bold text-xl">Email</span>
 					</div>
 				</div>
+
+				<div class="hover:scale-125 ease-in-out duration-300 hover:text-red-500">
+					<div class="h-auto w-14">
+						<a href="https://www.linkedin.com/in/anton-james-ja/" target="_blank">
+							<img src="images/icons/linkedin2.png"></img>
+						</a>
+						<span class="flex justify-center font-bold text-xl">LinkedIn</span>
+					</div>
+				</div>
+
+				<div class="hover:scale-125 ease-in-out duration-300 hover:text-red-500">
+					<div class="h-auto w-14">
+						<a href="https://github.com/AntonJames-Sistence" target="_blank">
+							<img src="images/icons/github.png"></img>
+						</a>
+						<span class="flex justify-center font-bold text-xl">Github</span>
+					</div>
+				</div>
+
 			</footer>
 
 		</div>
