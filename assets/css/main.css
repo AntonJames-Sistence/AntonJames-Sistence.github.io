@@ -4515,7 +4515,7 @@ canvas {
 }
 
 #imageContainer {
-  height: 140%;
+  /* height: 140%; */
 }
 
 #skills > .goto-next {
