@@ -35,6 +35,7 @@
 				<nav id="nav">
 					<ul>
 						<li>
+							<li><a href="#home" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Home</a></li>
 							<li><a href="#blue-yellow" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Projects</a></li>
 							<li><a href="#skills" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Skills</a></li>
 							<li><!-- <a href="#about-me" class="scrolly">About me</a> --></li>
@@ -55,7 +56,7 @@
 			</div>
 
 		<!-- Banner -->
-			<section class="w-full h-screen md:h-auto lg:h-screen flex flex-col md:flex-row md:justify-between">
+			<section id="home" class="w-full h-screen md:h-auto lg:h-screen flex flex-col md:flex-row md:justify-between">
 				<div id="three-banner" class="absolute -z-10 w-screen h-screen"></div>
 
 				<div class="w-full md:w-1/5 flex flex-row md:flex-col md:ml-4 lg:ml-8 lg:justify-between md:mt-4 lg:mt-8">
@@ -119,66 +120,88 @@
 				<div class="h-auto -mt-4 md:w-1/4 lg:w-1/6 lg:mr-8 md:mr-4 md:mt-4 lg:mt-8 ">
 					<div class="text-center text-2xl md:text-2xl lg:text-3xl font-bold md:mb-4 lg:mb-6 special-font">Skills</div>
 
-					<div class="grid grid-cols-5 place-items-center md:grid-cols-3 md:gap-2 font-sans italic">
+					<div class="grid 
+								grid-cols-5 
+								place-items-center 
+								md:grid-cols-3 
+								md:gap-2 
+								font-sans 
+								italic 
+								text-[8px] 
+								md:text-[10px] 
+								lg:text-sm">
+								
 						<div class="h-auto w-8 md:w-12 lg:w-14">
-							<img src="images/skills/js.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">JavaScript</h3>
+							<img src="images/skills/javascript.png"></img>
+							<h3 class="text-center font-bold flex w-full justify-center">JavaScript</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/html.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">HTML</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">HTML</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/css.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">CSS</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">CSS</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/react.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">React.js</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">React.js</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/redux.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">Redux</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">Redux</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/next.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">Next.js</h3>
-						</div>
-						<div class="h-auto w-8 md:w-12 lg:w-14">
-							<img src="images/skills/tailwind.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">Tailwind</h3>
-						</div>
-						<div class="h-auto w-8 md:w-12 lg:w-14">
-							<img src="images/skills/rails.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">Ruby on Rails</h3>
-						</div>
-						<div class="h-auto w-8 md:w-12 lg:w-14">
-							<img src="images/skills/postgresql.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">PostgreSQL</h3>
-						</div>
-						<div class="h-auto w-8 md:w-12 lg:w-14">
-							<img src="images/skills/mongo.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">MongoDB</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">Next.js</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/git.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">Git</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">Git</h3>
+						</div>
+						<div class="h-auto w-8 md:w-12 lg:w-14">
+							<img src="images/skills/rails.png"></img>
+							<h3 class="text-center font-bold flex w-full justify-center">RubyOnRails</h3>
+						</div>
+						<div class="h-auto w-8 md:w-12 lg:w-14">
+							<img src="images/skills/node.png"></img>
+							<h3 class="text-center font-bold flex w-full justify-center">Node.js</h3>
+						</div>
+						<div class="h-auto w-8 md:w-12 lg:w-14">
+							<img src="images/skills/mongo.png"></img>
+							<h3 class="text-center font-bold flex w-full justify-center">MongoDB</h3>
+						</div>
+						<div class="h-auto w-8 md:w-12 lg:w-14">
+							<img src="images/skills/tailwind.png"></img>
+							<h3 class="text-center font-bold flex w-full justify-center">Tailwind</h3>
+						</div>
+						<div class="h-auto w-8 md:w-12 lg:w-14">
+							<img src="images/skills/postgresql.png"></img>
+							<h3 class="text-center font-bold flex w-full justify-center">PostgreSQL</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/python.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">Python</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">Python</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/aws.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">AWS</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">AWS</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/rest2.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">REST API</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">REST_APIs</h3>
 						</div>
 						<div class="h-auto w-8 md:w-12 lg:w-14">
 							<img src="images/skills/openai.png"></img>
-							<h3 class="text-center font-bold text-[8px] md:text-[10px] lg:text-sm flex w-full justify-center">OpenAI</h3>
+							<h3 class="text-center font-bold flex w-full justify-center">OpenAI</h3>
+						</div>
+						<div class="h-auto w-8 md:w-12 lg:w-14">
+							<img src="images/skills/Go.png"></img>
+							<h3 class="text-center font-bold flex w-full justify-center">Golang</h3>
+						</div>
+						<div class="h-auto w-8 md:w-12 lg:w-14">
+							<img src="images/skills/stripe.png"></img>
+							<h3 class="text-center font-bold flex w-full justify-center">Stripe</h3>
 						</div>
 					</div>
 				</div>
@@ -205,7 +228,7 @@
 							<p class="mb-3 ml-3">- Improved user experience by integrating Eventbrite API, enabling users to easily view events and book tickets.</p>
 						</div>
 
-						<ul class="actions justify-self-center">
+						<ul class="actions self-end">
 							<li><a href="https://blue-yellow-foundation.vercel.app/" class="button button-link-yellow" target="_blank">Live Link</a></li>
 							<li><a href="https://github.com/AntonJames-Sistence/BlueYellowTeam" class="button button-link-yellow" target="_blank">GitHub Repo</a></li>
 						</ul>
@@ -283,7 +306,7 @@
 						<p class="mb-3 ml-3">- Built reusable React components to save 30+ hours of development.</p>
 					</div>
 
-					<ul class="actions">
+					<ul class="actions self-end">
 						<li><a href="https://steamer-9bo7.onrender.com/" class="button button-link-blue" target="_blank">Live Link</a></li>
 						<li><a href="https://github.com/AntonJames-Sistence/Steamer/" class="button button-link-blue" target="_blank">GitHub Repo</a></li>
 					</ul>
@@ -384,86 +407,106 @@
 						<div class="line my-4 md:my-8"></div>
 					</header>
 				
-					<div class="grid grid-cols-4 gap-8 place-items-center md:grid-cols-5 mt-6 md:mt-0 font-sans italic">
+					<div class="grid 
+								grid-cols-4 
+								gap-8 
+								place-items-center 
+								md:grid-cols-6 
+								mt-6 
+								md:mt-0 
+								font-sans 
+								italic 
+								text-[10px] 
+								md:text-sm 
+								lg:text-base">
+								
 						<div class="h-auto w-10 md:w-16">
-							<img src="images/skills/js.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">JavaScript</h3>
+							<img src="images/skills/javascript.png"></img>
+							<h3 class="flex justify-center font-bold">JavaScript</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/typescript.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">TypeScript</h3>
+							<h3 class="flex justify-center font-bold">TypeScript</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/html.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">HTML</h3>
+							<h3 class="flex justify-center font-bold">HTML</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/css.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">CSS</h3>
+							<h3 class="flex justify-center font-bold">CSS</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/react.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">React.js</h3>
+							<h3 class="flex justify-center font-bold">React.js</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/redux.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Redux</h3>
+							<h3 class="flex justify-center font-bold">Redux</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/next.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Next.js</h3>
+							<h3 class="flex justify-center font-bold">Next.js</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/node.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Node.js</h3>
+							<h3 class="flex justify-center font-bold">Node.js</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/tailwind.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Tailwind</h3>
+							<h3 class="flex justify-center font-bold">Tailwind</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/rails.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Ruby on Rails</h3>
+							<h3 class="flex justify-center font-bold">RubyOnRails</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/postgresql.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">PostgreSQL</h3>
+							<h3 class="flex justify-center font-bold">PostgreSQL</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/mongo.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">MongoDB</h3>
+							<h3 class="flex justify-center font-bold">MongoDB</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/git.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Git</h3>
+							<h3 class="flex justify-center font-bold">Git</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/python.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Python</h3>
+							<h3 class="flex justify-center font-bold">Python</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/aws.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">AWS</h3>
+							<h3 class="flex justify-center font-bold">AWS</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/rest2.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">REST API</h3>
+							<h3 class="flex justify-center font-bold">REST_APIs</h3>
+						</div>
+						<div class="h-auto w-10 md:w-16">
+							<img src="images/skills/Stripe.png"></img>
+							<h3 class="flex justify-center font-bold">Stripe</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/openai.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">OpenAI</h3>
+							<h3 class="flex justify-center font-bold">OpenAI</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/express.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Express.js</h3>
+							<h3 class="flex justify-center font-bold">Express.js</h3>
+						</div>
+						<div class="h-auto w-10 md:w-16">
+							<img src="images/skills/Go.png"></img>
+							<h3 class="flex justify-center font-bold">Golang</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/algorithm.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Algorithms</h3>
+							<h3 class="flex justify-center font-bold">Algorithms</h3>
 						</div>
 						<div class="h-auto w-10 md:w-16">
 							<img src="images/skills/data.png"></img>
-							<h3 class="flex justify-center font-bold text-[12px] md:text-base">Data Structures</h3>
+							<h3 class="flex justify-center font-bold">Data_Structures</h3>
 						</div>
 					</div>
 					
