@@ -4545,6 +4545,10 @@ canvas {
     padding: 10px;
   }
 
+  .resume-holder {
+    height: 50vh;
+  }
+
 }
 
 .nav-links {
