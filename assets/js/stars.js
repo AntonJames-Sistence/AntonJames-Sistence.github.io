@@ -79,11 +79,13 @@ window.onload = () => {
 
   const starsContainer = document.getElementById("three-banner");
   starsContainer.appendChild(renderer.domElement);
-};
 
-// Handle window resize
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
+  // Handle window resize and adjust renderer size
+  window.addEventListener("resize", () => {
+    const width = starsContainer.offsetWidth;
+    const height = starsContainer.offsetHeight;
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+  });
+};
