@@ -4514,10 +4514,6 @@ canvas {
   cursor: pointer;
 }
 
-#imageContainer {
-  /* height: 140%; */
-}
-
 #skills > .goto-next {
   position: relative;
 }
@@ -4581,4 +4577,24 @@ canvas {
   100% {
     left: 0%; /* Final position */
   }
+}
+
+/* slick slider style */
+
+#imageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+#imageContainer a {
+  height: 120px;
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center center;
+}
+#imageContainer a.slick-center {
+  /* Add styles specific to the center slide here */
+  border: 2px solid red; /* Example: Add a red border to the center slide */
+  box-shadow: 0 0 10px rgba(240, 3, 3, 0.5); /* Example: Add a shadow to the center slide */
 }
