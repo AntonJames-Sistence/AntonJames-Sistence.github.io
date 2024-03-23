@@ -3325,6 +3325,9 @@ input[type="button"]:disabled,
 .spotlight.style4 .content {
   border-color: RGB(248, 219, 82);
 }
+.spotlight.style5 .content {
+  border-color: RGB(75, 126, 226);
+}
 
 .spotlight.inactive .content {
   opacity: 0;
@@ -4450,6 +4453,10 @@ body.is-touch #banner {
 .button-link-yellow {
   color: RGB(248, 219, 82) !important;
   box-shadow: inset 0 0 0 1px RGB(248, 219, 82);
+}
+.button-link-extrablue {
+  color: RGB(75, 126, 226) !important;
+  box-shadow: inset 0 0 0 1px RGB(75, 126, 226);
 }
 
 .tech-text {
