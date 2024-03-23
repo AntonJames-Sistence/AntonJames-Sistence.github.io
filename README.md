@@ -29,7 +29,7 @@ while continuously evolving and improving within a dynamic software development 
 * Developed a responsive design using Tailwind CSS, leading to an optimal UX across various devices and significantly reducing development time.
 * Improved user experience by integrating Eventbrite API, enabling users to easily view events and book tickets.
 
-<img src="./images/blue&yellow_screenshot.png" alt="Profile Picture" width="350" height="200" />
+<img src="./images/blueyellow_screenshot.png" alt="Profile Picture" width="350" height="200" />
 
 - [Live Link](https://blueyellowfoundation.vercel.app/)
 - [GitHub Repo](https://github.com/AntonJames-Sistence/BlueYellowTeam)
