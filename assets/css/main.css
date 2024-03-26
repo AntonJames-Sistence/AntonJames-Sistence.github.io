@@ -219,10 +219,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   color: #e44c65 !important;
   border-bottom-color: transparent;
-}
+} */
 
 strong,
 b {
@@ -3752,10 +3752,10 @@ body.is-touch #banner {
 
 #footer {
   background: #272833;
-  padding: 6em 0;
+  padding: 2em 0;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #footer .icons .icon.alt {
