@@ -4597,10 +4597,9 @@ canvas {
   height: 125px;
   margin: 20px 15px 20px 15px;
   border-radius: 15px;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   transition: all 0.2s;
-  /* margin: 0.5rem; */
 }
 @media (max-width: 768px) {
   #imageContainer a {

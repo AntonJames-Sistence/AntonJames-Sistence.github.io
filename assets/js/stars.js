@@ -20,7 +20,7 @@ const init = () => {
   camera.position.z = 1;
 
   renderer = new THREE.WebGLRenderer();
-  renderer.setSize(width, height);
+  renderer.setSize(width, height + 100);
 
   starGeo = new THREE.BufferGeometry();
   const positions = [];
