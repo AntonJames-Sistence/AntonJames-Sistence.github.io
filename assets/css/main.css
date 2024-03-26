@@ -4574,16 +4574,7 @@ canvas {
 }
 
 .hover-lightsaber:hover::before {
-  animation: moveLightsaber 1s infinite alternate;
-}
-
-@keyframes moveLightsaber {
-  0% {
-    left: -80%; /* Initial position */
-  }
-  100% {
-    left: 0%; /* Final position */
-  }
+  left: -20%;
 }
 
 /* slick slider style */
