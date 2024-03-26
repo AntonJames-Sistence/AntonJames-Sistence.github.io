@@ -10,6 +10,8 @@ const init = () => {
   // Get the size of the parent element
   const width = document.getElementById("home").offsetWidth;
   const height = document.getElementById("home").offsetHeight;
+  // const width = window.innerWidth;
+  // const height = window.innerHeight;
 
   camera = new THREE.PerspectiveCamera(
     60,
