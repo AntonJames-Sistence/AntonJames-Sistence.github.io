@@ -7,16 +7,20 @@ const starColors = [0xfec5be, 0xffffff, 0xcf9ef9, 0xe3ffe9, 0xfde4b1];
 const init = () => {
   scene = new THREE.Scene();
 
+  // Get the size of the parent element
+  const width = document.getElementById("home").offsetWidth;
+  const height = document.getElementById("home").offsetHeight;
+
   camera = new THREE.PerspectiveCamera(
     60,
-    window.innerWidth / window.innerHeight,
+    width / height,
     1,
     1000,
   );
   camera.position.z = 1;
 
   renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(width, height);
 
   starGeo = new THREE.BufferGeometry();
   const positions = [];

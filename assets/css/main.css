@@ -4594,13 +4594,19 @@ canvas {
 }
 
 #imageContainer a {
-  height: 120px;
+  height: 125px;
   margin: 20px 15px 20px 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-size: cover;
   background-position: center center;
-  transition: all 0.3s;
+  transition: all 0.2s;
   /* margin: 0.5rem; */
+}
+@media (max-width: 768px) {
+  #imageContainer a {
+    height: 180px;
+    margin: 0px 15px 0px 15px;
+  }
 }
 #imageContainer a:hover {
   transform: scale(1.1);
