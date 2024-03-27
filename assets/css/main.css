@@ -3856,7 +3856,7 @@ body.is-touch #banner {
   /* Wrapper */
 
   .wrapper {
-    padding: 4.5em 0 2.5em 0;
+    padding: 3em 0 0 0;
   }
 
   /* Dropotron */
@@ -4318,7 +4318,7 @@ body.is-touch #banner {
   /* Wrapper */
 
   .wrapper {
-    padding: 3em 1.25em 1em 1.25em;
+    padding: 1.5em 1.25em 1em 1.25em;
   }
 
   /* Banner */
@@ -4565,7 +4565,7 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(69, 83, 240, .8), rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 200, .6), rgba(255, 255, 255, 0));
   /* box-shadow: 0 0 50px rgba(69, 83, 240, 0.8); */
   top: 0;
   left: -80%;
@@ -4601,6 +4601,6 @@ canvas {
 #imageContainer a:hover {
   transform: scale(1.1);
   transition: all 0.3s;
-  box-shadow: inset 0 0 20px rgba(64, 0, 255, 0.7),
-              0 0 20px rgba(64, 0, 255, 0.7);
+  box-shadow: inset 0 0 20px rgba(255, 0, 66, 0.7),
+              0 0 20px rgba(255, 0, 66, 0.7);
 }
