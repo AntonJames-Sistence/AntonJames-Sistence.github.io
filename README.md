@@ -31,7 +31,7 @@ while continuously evolving and improving within a dynamic software development 
 
 <img src="./images/blueyellow_screenshot.png" alt="Profile Picture" width="350" height="200" />
 
-- [Live Link](https://blueyellowfoundation.vercel.app/)
+- [Live Link](https://blueyellowfoundation.org/)
 - [GitHub Repo](https://github.com/AntonJames-Sistence/BlueYellowTeam)
 
 ### Itenerator (Personalized Activity Recommender)
