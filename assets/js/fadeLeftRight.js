@@ -1,16 +1,8 @@
 $(document).ready(function(){
     $(window).scroll(function(){
         // Check if top recommendation is in viewport
-        if(isElementInViewport($('.fade-left'))){
-            $('.fade-left').animate({
-                opacity: 1,
-                left: '0'
-            }, 1000);
-        }
-
-        // Check if bottom recommendation is in viewport
-        if(isElementInViewport($('.fade-right'))){
-            $('.fade-right').animate({
+        if(isElementInViewport($('.fade-side'))){
+            $('.fade-side').animate({
                 opacity: 1,
                 left: '0'
             }, 1000);
