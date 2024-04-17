@@ -4565,16 +4565,18 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 200, .6), rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(200, 0, 0, 0.9), rgba(255, 255, 255, 0));
   /* box-shadow: 0 0 50px rgba(69, 83, 240, 0.8); */
   top: 0;
   left: -80%;
   transition: all 0.4s;
   z-index: -1;
+  opacity: 0;
 }
 
 .hover-lightsaber:hover::before {
   left: -20%;
+  opacity: 1;
 }
 
 /* slick slider style */
@@ -4603,4 +4605,35 @@ canvas {
   transition: all 0.3s;
   box-shadow: inset 0 0 20px rgba(255, 0, 66, 0.7),
               0 0 20px rgba(255, 0, 66, 0.7);
+}
+
+.goto-next-new {
+  border: 0;
+  bottom: 0;
+  display: block;
+  height: 5em;
+  left: 50%;
+  margin: 0 0 0 -5em;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 10em;
+  white-space: nowrap;
+  width: 10em;
+  z-index: 1;
+}
+
+.goto-next-new:before {
+  background-image: url("images/arrow.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 1.5em;
+  left: 50%;
+  margin: -0.75em 0 0 -1em;
+  position: absolute;
+  top: 50%;
+  width: 2em;
+  z-index: 1;
 }
