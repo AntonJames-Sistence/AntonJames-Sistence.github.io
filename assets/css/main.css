@@ -4587,7 +4587,7 @@ canvas {
 }
 
 #imageContainer a {
-  height: 125px;
+  height: 130px;
   margin: 20px 15px 20px 15px;
   border-radius: 15px;
   background-size: contain;
@@ -4597,6 +4597,12 @@ canvas {
 @media (max-width: 768px) {
   #imageContainer a {
     height: 180px;
+    margin: 0px 15px 0px 15px;
+  }
+}
+@media (min-width: 3042px) {
+  #imageContainer a {
+    height: 190px;
     margin: 0px 15px 0px 15px;
   }
 }
