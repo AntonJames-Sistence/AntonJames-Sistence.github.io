@@ -125,7 +125,7 @@
 				</div>
 
 				<div class="h-auto -mt-4 md:w-1/4 lg:w-1/6 lg:mr-8 md:mr-4 md:mt-4 lg:mt-8 mb-6 md:mb-0">
-					<div class="text-center my-4 text-2xl lg:text-3xl font-bold md:mb-4 lg:mb-6 special-font">Tech Stack</div>
+					<div class="text-center my-4 text-2xl lg:text-3xl font-bold md:mb-4 lg:mb-6 special-font">Go-to Stack</div>
 
 					<div class="grid 
 								grid-cols-5 
@@ -167,6 +167,10 @@
 							<h3 class="text-center flex w-full justify-center">Tailwind</h3>
 						</div>
 						<div class="h-auto w-10 lg:w-12">
+							<img src="images/skills/rails.png"></img>
+							<h3 class="text-center flex w-full justify-center">Ruby&nbsp;On&nbsp;Rails</h3>
+						</div>
+						<div class="h-auto w-10 lg:w-12">
 							<img src="images/skills/html.png"></img>
 							<h3 class="text-center flex w-full justify-center">HTML5</h3>
 						</div>
@@ -177,10 +181,6 @@
 						<div class="h-auto w-10 lg:w-12">
 							<img src="images/skills/python.png"></img>
 							<h3 class="text-center flex w-full justify-center">Python</h3>
-						</div>
-						<div class="h-auto w-10 lg:w-12">
-							<img src="images/skills/rails.png"></img>
-							<h3 class="text-center flex w-full justify-center">Ruby&nbsp;On&nbsp;Rails</h3>
 						</div>
 						<div class="h-auto w-10 lg:w-12">
 							<img src="images/skills/rest2.png"></img>
@@ -604,7 +604,7 @@
 					</header>
 
 					<div class="flex flex-col md:flex-row md:justify-between">
-						<div class="flex flex-col mb-8 md:w-[45%] fade-side" style="opacity: 0; position: relative; left: -100px;">
+						<div class="flex flex-col mb-8 md:w-[45%] fade-side">
 							<div class="flex flex-col font-bold mb-8">
 								<img src="/images/ola_rec.png" class="h-[100px] rounded-full self-center"></img>
 								<p>Ola Parks</p>
@@ -613,7 +613,7 @@
 							<div class="text-base  font-semibold text-left">I had the privilege of working with Anton James as a Team Lead during website development for Blue&Yellow Foundation. His professionalism, organizational prowess, and regular communication with stakeholders were instrumental in the project's success. Despite his role as a team lead, Anton showcased exceptional collaborative skills, fostering a cohesive and efficient working environment. His full-stack technical expertise, coupled with outstanding frontend engineering skills, played a crucial role in delivering a top-notch product. Anton's meticulous attention to detail further ensured the project's quality. I highly recommend Anton James for any leadership or technical role, as his dedication and skill set make him an invaluable asset to any team or project. </div>
 						</div>
 
-						<div class="flex flex-col md:w-[45%] fade-side" style="opacity: 0; position: relative; left: 100px;">
+						<div class="flex flex-col md:w-[45%] fade-side">
 							<div class="mb-8 flex flex-col font-bold">
 								<img src="/images/tim_rec.png" class="h-[100px] rounded-full self-center"></img>
 								<p>Tim Carter</p>
@@ -624,7 +624,7 @@
 					</div>
 				</div>
 
-				<a href="#contact" class="goto-next-new scrolly"></a>
+				<!-- <a href="#contact" class="goto-next-new scrolly"></a> -->
 			</section>
 
 			<!-- Contact -->
@@ -713,9 +713,9 @@
 		<script>
 			$(document).ready(function(){
 			  $('#imageContainer').slick({
-				autoplay: false,
-				autoplaySpeed: 100,
-    			speed: 700,
+				autoplay: true,
+				autoplaySpeed: 2000,
+    			speed: 1000,
 				slidesToShow: 3,
       			slidesToScroll: 1,
 				infinite: true,
@@ -733,8 +733,9 @@
 					settings: {
 						arrows: false,
 						slidesToShow: 1,
-						speed: 3000,
+						speed: 1000,
 						swipe: true,
+						waitForAnimate: false,
 						}
 					}]
 			  });

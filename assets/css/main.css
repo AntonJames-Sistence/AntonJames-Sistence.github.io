@@ -4643,3 +4643,9 @@ canvas {
   width: 2em;
   z-index: 1;
 }
+
+.fade-side {
+  opacity: 0;
+  position: relative;
+  left: 200px;
+}
