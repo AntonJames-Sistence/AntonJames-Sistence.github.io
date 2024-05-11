@@ -3,61 +3,53 @@ import * as THREE from "three";
 let scene, camera, renderer, starGeo, stars;
 
 const starColors = [0xfec5be, 0xffffff, 0xcf9ef9, 0xe3ffe9, 0xfde4b1];
+const STAR_RANGE = 300;
+const NUM_STARS_FACTOR = 30;
+const STAR_SIZE = 1.7;
 
 const init = () => {
   scene = new THREE.Scene();
 
-  // Get the size of the parent element
   const container = document.getElementById("home");
   const width = container.offsetWidth;
   const height = container.offsetHeight + 200;
 
-  // const width = window.innerWidth;
-  // const height = window.innerHeight;
-
-  camera = new THREE.PerspectiveCamera(
-    60,
-    width / height,
-    1,
-    1000,
-  );
+  camera = new THREE.PerspectiveCamera(60, width / height, 1, 1000);
   camera.position.z = 1;
 
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(width, height);
 
-  // Adjust starGeo generation based on the window size
-  const numStars = Math.floor((width * height) / 30);
+  const numStars = Math.floor((width * height) / NUM_STARS_FACTOR);
 
   starGeo = new THREE.BufferGeometry();
   const positions = [];
   const colors = [];
 
   for (let i = 0; i < numStars; i++) {
-    const x = Math.random() * 500 - 300;
-    const y = Math.random() * 500 - 300;
-    const z = Math.random() * 500 - 300;
+    const x = Math.random() * STAR_RANGE * 2 - STAR_RANGE;
+    const y = Math.random() * STAR_RANGE * 2 - STAR_RANGE;
+    const z = Math.random() * STAR_RANGE * 2 - STAR_RANGE;
 
     positions.push(x, y, z);
 
-    const randomColor =
-      starColors[Math.floor(Math.random() * starColors.length)];
-    const color = new THREE.Color(randomColor);
+    const randomColorIndex = Math.floor(Math.random() * starColors.length);
+    const color = new THREE.Color(starColors[randomColorIndex]);
     colors.push(color.r, color.g, color.b);
   }
 
   starGeo.setAttribute(
     "position",
-    new THREE.BufferAttribute(new Float32Array(positions), 3),
+    new THREE.BufferAttribute(new Float32Array(positions), 3)
   );
   starGeo.setAttribute(
     "color",
-    new THREE.BufferAttribute(new Float32Array(colors), 3),
+    new THREE.BufferAttribute(new Float32Array(colors), 3)
   );
 
   let sprite = new THREE.TextureLoader().load("./images/star.png");
   let starMaterial = new THREE.PointsMaterial({
-    size: 1.7,
+    size: STAR_SIZE,
     map: sprite,
     alphaTest: 0.5,
     transparent: true,
@@ -69,22 +61,11 @@ const init = () => {
 
   animate();
 
-  window.addEventListener("resize", () => {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize(width, height);
-  });
+  window.addEventListener("resize", debounce(onWindowResize, 250));
 };
 
 const animate = () => {
-  // Move the stars in the opposite direction of the camera's movement
   stars.position.z = camera.position.z - 100;
-
-  // Rotate the stars
   stars.rotation.x += 0.0010;
   stars.rotation.y += 0.0010;
 
@@ -93,6 +74,26 @@ const animate = () => {
 
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
+};
+
+const onWindowResize = () => {
+  const container = document.getElementById("home");
+  const width = container.offsetWidth;
+  const height = container.offsetHeight + 200;
+
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(width, height);
+};
+
+const debounce = (func, delay) => {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), delay);
+  };
 };
 
 window.onload = () => {
