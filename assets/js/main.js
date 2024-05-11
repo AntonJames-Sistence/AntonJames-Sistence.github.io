@@ -42,14 +42,14 @@
 
   // Title Bar.
   $(
-    '<div id="titleBar">' +
+    '<div id="titleBar" class="toggle">' +
       '<a href="#navPanel" class="toggle"></a>' +
       '<span class="title">' +
       // + $('#logo').html()
       "Quick Navigation" +
       "</span>" +
       "</div>",
-  ).appendTo($body);
+  ).appendTo($body)
 
   // Panel.
   $('<div id="navPanel">' + "<nav>" + $("#nav").navList() + "</nav>" + "</div>")
