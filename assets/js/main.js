@@ -46,7 +46,7 @@
       '<a href="#navPanel" class="toggle"></a>' +
       '<span class="title">' +
       // + $('#logo').html()
-      "Navigation" +
+      "Anton James" +
       "</span>" +
       "</div>",
   ).appendTo($body);
