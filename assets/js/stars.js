@@ -8,10 +8,12 @@ const init = () => {
   scene = new THREE.Scene();
 
   // Get the size of the parent element
-  // const width = document.getElementById("home").offsetWidth;
-  // const height = document.getElementById("home").offsetHeight;
-  const width = window.innerWidth;
-  const height = window.innerHeight + 500;
+  const container = document.getElementById("home");
+  const width = container.offsetWidth;
+  const height = container.offsetHeight + 200;
+
+  // const width = window.innerWidth;
+  // const height = window.innerHeight;
 
   camera = new THREE.PerspectiveCamera(
     60,
@@ -24,11 +26,14 @@ const init = () => {
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(width, height);
 
+  // Adjust starGeo generation based on the window size
+  const numStars = Math.floor((width * height) / 30);
+
   starGeo = new THREE.BufferGeometry();
   const positions = [];
   const colors = [];
 
-  for (let i = 0; i < 15000; i++) {
+  for (let i = 0; i < numStars; i++) {
     const x = Math.random() * 500 - 300;
     const y = Math.random() * 500 - 300;
     const z = Math.random() * 500 - 300;
@@ -63,6 +68,16 @@ const init = () => {
   scene.add(stars);
 
   animate();
+
+  window.addEventListener("resize", () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(width, height);
+  });
 };
 
 const animate = () => {
@@ -85,13 +100,4 @@ window.onload = () => {
 
   const starsContainer = document.getElementById("three-banner");
   starsContainer.appendChild(renderer.domElement);
-
-  // Handle window resize and adjust renderer size
-  // window.addEventListener("resize", () => {
-  //   const width = starsContainer.offsetWidth;
-  //   const height = starsContainer.offsetHeight;
-  //   renderer.setSize(width, height);
-  //   camera.aspect = width / height;
-  //   camera.updateProjectionMatrix();
-  // });
 };
