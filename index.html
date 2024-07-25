@@ -14,7 +14,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://cdn.tailwindcss.com"></script>
-		<script type="importmap">
+		<script type="importmap" defer>
 			{
 			  "imports": {
 				"three": "https://unpkg.com/three@0.157.0/build/three.module.js",
@@ -34,7 +34,6 @@
 						<li>
 							<li><a href="#home" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Home</a></li>
 							<li><a href="#blue-yellow" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Projects</a></li>
-							<!-- <li><a href="#skills" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Technical Skills</a></li> -->
 							<li><a href="#about-me" class="scrolly transition-transform duration-300 transform hover:translate-x-2">About me</a></li>
 							<li><a href="#resume" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Resume</a></li>
 							<li><a href="#recommendations" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Recommendations</a></li>
@@ -495,42 +494,13 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/scrollToTop.js"></script>
-		<script src="assets/js/fadeLeftRight.js"></script>
+		<script src="assets/js/scrollToTop.js" defer></script>
+		<script src="assets/js/fadeLeftRight.js" defer></script>
 		
-		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script type="text/javascript" src="slick/slick.min.js"></script>
-		<script>
-			$(document).ready(function(){
-			  $('#imageContainer').slick({
-				autoplay: true,
-				autoplaySpeed: 2000,
-				slidesToShow: 3,
-      			slidesToScroll: 1,
-				infinite: true,
-				dots: false,
-				arrows: true,
-				cssEase: 'linear',
-				waitForAnimate: true,
-				pauseOnFocus: false, 
-				pauseOnHover: true,
-				prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-				nextArrow: '<button type="button" class="slick-next">Next</button>',
-				responsive: [
-					{
-					breakpoint: 768,
-					settings: {
-						arrows: false,
-						slidesToShow: 1,
-						speed: 1000,
-						swipe: true,
-						waitForAnimate: false,
-						}
-					}]
-			  });
-			});
-		</script>
-		<script type="module" src="./assets/js/stars.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+		<script type="text/javascript" src="slick/slick.min.js" defer></script>
+		<script type="text/javascript" src="assets/js/slickSlider.js" defer></script>
+		<script type="module" src="./assets/js/stars.js" defer></script>
 	</body>
 </html>
