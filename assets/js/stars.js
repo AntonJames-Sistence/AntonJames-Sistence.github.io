@@ -47,7 +47,7 @@ const init = () => {
     new THREE.BufferAttribute(new Float32Array(colors), 3)
   );
 
-  let sprite = new THREE.TextureLoader().load("./images/star.png");
+  let sprite = new THREE.TextureLoader().load("./images/star.webp");
   let starMaterial = new THREE.PointsMaterial({
     size: STAR_SIZE,
     map: sprite,
