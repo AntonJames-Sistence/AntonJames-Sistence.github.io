@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-let scene, camera, renderer, starGeo, stars, planet, planetGlow, circularGlow;
+let scene, camera, renderer, starGeo, stars, planetGlow, circularGlow;
 let clock = new THREE.Clock();
 
 const starColors = [0xfec5be, 0xffffff, 0xcf9ef9, 0xe3ffe9, 0xfde4b1];
