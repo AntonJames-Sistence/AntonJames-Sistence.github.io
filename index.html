@@ -527,9 +527,6 @@
 				const bannerContainer = document.getElementById('home');
 				const neuralNetworkBg = document.getElementById('neural-network-bg');
 				
-				console.log('Banner container:', bannerContainer);
-				console.log('Neural network bg:', neuralNetworkBg);
-				
 				if (neuralNetworkBg) {
 					// Mount the neural network directly on the background container
 					// This ensures the canvas is in the right place for click events
@@ -538,7 +535,6 @@
 						formation: 'QuantumCortex',
 						density: 1.0
 					}).then(instance => {
-						console.log('Neural network mounted successfully:', instance);
 						// Store the instance globally for debugging
 						window.neuralNetworkInstance = instance;
 					}).catch(error => {

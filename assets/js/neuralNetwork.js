@@ -16,7 +16,7 @@ import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 
 const defaultConfig = {
   paused: false,
-  activePaletteIndex: 0,
+  activePaletteIndex: 1,
   currentFormation: 0,
   numFormations: 4,
   densityFactor: 1,
@@ -1154,6 +1154,49 @@ export async function mountNeuralNetwork(container, options = {}) {
     uActivePalette: { value: 0 },
   };
 
+  // Automatic pulse system
+  let lastAutoPulseTime = 0;
+  let autoPulseInterval = 1.5; // Random interval between 1-2 seconds
+  let autoPulseIndex = 0;
+
+  function triggerAutoPulse() {
+    if (!nodesMesh || !connectionsMesh) return;
+
+    const time = clock.getElapsedTime();
+    const palette = colorPalettes[config.activePaletteIndex];
+
+    // Generate random position within the network bounds
+    const randomX = THREE.MathUtils.randFloatSpread(40);
+    const randomY = THREE.MathUtils.randFloatSpread(40);
+    const randomZ = THREE.MathUtils.randFloatSpread(40);
+    const randomPosition = new THREE.Vector3(randomX, randomY, randomZ);
+
+    // Get random color from current palette
+    const randomColor = palette[Math.floor(Math.random() * palette.length)];
+
+    // Update pulse uniforms
+    autoPulseIndex = (autoPulseIndex + 1) % 3;
+    nodesMesh.material.uniforms.uPulsePositions.value[autoPulseIndex].copy(
+      randomPosition
+    );
+    nodesMesh.material.uniforms.uPulseTimes.value[autoPulseIndex] = time;
+    connectionsMesh.material.uniforms.uPulsePositions.value[
+      autoPulseIndex
+    ].copy(randomPosition);
+    connectionsMesh.material.uniforms.uPulseTimes.value[autoPulseIndex] = time;
+
+    // Set pulse colors
+    nodesMesh.material.uniforms.uPulseColors.value[autoPulseIndex].copy(
+      randomColor
+    );
+    connectionsMesh.material.uniforms.uPulseColors.value[autoPulseIndex].copy(
+      randomColor
+    );
+
+    // Randomize next interval (1-2 seconds)
+    autoPulseInterval = 1.0 + Math.random();
+  }
+
   // Create initial network
   createNetworkVisualization(config.currentFormation, config.densityFactor);
 
@@ -1514,6 +1557,13 @@ export async function mountNeuralNetwork(container, options = {}) {
 
   function animate() {
     const t = clock.getElapsedTime();
+
+    // Check if it's time for an automatic pulse
+    if (t - lastAutoPulseTime >= autoPulseInterval) {
+      triggerAutoPulse();
+      lastAutoPulseTime = t;
+    }
+
     if (!config.paused) {
       if (nodesMesh) {
         nodesMesh.material.uniforms.uTime.value = t;
