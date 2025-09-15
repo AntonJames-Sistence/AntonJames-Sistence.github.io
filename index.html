@@ -13,6 +13,57 @@
 		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 		<link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://antonjames-sistence.github.io/">
+		<meta property="og:title" content="Anton James - Senior Software Engineer">
+		<meta property="og:description" content="Senior Software Engineer proficient in TypeScript, React.js, Next.js, and cybersecurity platforms. Passionate about web development and solving complex challenges.">
+		<meta property="og:image" content="https://antonjames-sistence.github.io/images/headshot4.JPG">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://antonjames-sistence.github.io/">
+		<meta property="twitter:title" content="Anton James - Senior Software Engineer">
+		<meta property="twitter:description" content="Senior Software Engineer proficient in TypeScript, React.js, Next.js, and cybersecurity platforms. Passionate about web development and solving complex challenges.">
+		<meta property="twitter:image" content="https://antonjames-sistence.github.io/images/headshot4.JPG">
+
+		<!-- SEO Meta Description -->
+		<meta name="description" content="Senior Software Engineer proficient in TypeScript, React.js, Next.js, and cybersecurity platforms. View my projects, resume, and contact information.">
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Anton James",
+			"jobTitle": "Senior Software Engineer",
+			"description": "Senior Software Engineer proficient in crafting, deploying, and optimizing web applications using JavaScript/TypeScript, React.js, Redux, Vite, Next.js, and Tailwind CSS.",
+			"url": "https://antonjames-sistence.github.io",
+			"image": "https://antonjames-sistence.github.io/images/headshot4.JPG",
+			"sameAs": [
+				"https://www.linkedin.com/in/anton-james-ja/",
+				"https://github.com/AntonJames-Sistence"
+			],
+			"knowsAbout": [
+				"JavaScript",
+				"TypeScript",
+				"React.js",
+				"Next.js",
+				"Redux",
+				"Tailwind CSS",
+				"Node.js",
+				"Ruby on Rails",
+				"Cybersecurity",
+				"Web Development"
+			],
+			"alumniOf": {
+				"@type": "Organization",
+				"name": "Master's degree in Computer Science and Math"
+			}
+		}
+		</script>
+
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script type="importmap" defer>
 			{
@@ -29,15 +80,15 @@
 
 		<!-- Header -->
 			<header id="header" class="invisible" style="pointer-events: auto;">
-				<nav id="nav">
+				<nav id="nav" aria-label="Main navigation">
 					<ul>
 						<li>
 							<li><a href="#home" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Home</a></li>
 							<li><a href="#cybersecurity" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Projects</a></li>
-							<li><a href="#about-me" class="scrolly transition-transform duration-300 transform hover:translate-x-2">About me</a></li>
+							<li><a href="#about-me" class="scrolly transition-transform duration-300 transform hover:translate-x-2">About</a></li>
 							<li><a href="#resume" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Resume</a></li>
 							<li><a href="#recommendations" class="scrolly transition-transform duration-300 transform hover:translate-x-2">Recommendations</a></li>
-							<li><a href="#footer" class="scrolly w-full transition-transform duration-300 transform hover:translate-x-2">Contact me</a></li>
+							<li><a href="#footer" class="scrolly w-full transition-transform duration-300 transform hover:translate-x-2">Contact</a></li>
 						</li>
 					</ul>
 				</nav>
@@ -65,12 +116,12 @@
 						</div>
 
 						<div class="justify-center invisible absolute md:relative md:visible flex flex-col text-lg font-bold md:mb-20 lg:m-10 md:text-xl md:self-center lg:text-2xl special-font nav-links neural-network-interactive">
-							<a href="#about-me" class="scrolly transition-transform duration-300 transform hover:translate-x-2 hover-lightsaber">About me</a>
+							<a href="#about-me" class="scrolly transition-transform duration-300 transform hover:translate-x-2 hover-lightsaber">About</a>
 							<a href="#cybersecurity" class="scrolly transition-transform duration-300 transform hover:translate-x-2 hover-lightsaber">Projects</a>
 							<!-- <a href="#skills" class="scrolly transition-transform duration-300 transform hover:translate-x-2 hover-lightsaber">Technical Skills</a> -->
 							<a href="#resume" class="scrolly transition-transform duration-300 transform hover:translate-x-2 hover-lightsaber">Resume</a>
 							<!-- <a href="#recommendations" class="scrolly transition-transform duration-300 transform hover:translate-x-2 hover-lightsaber">Recommendations</a> -->
-							<a href="#footer" class="scrolly w-full transition-transform duration-300 transform hover:translate-x-2 hover-lightsaber">Contact Me</a>
+							<a href="#footer" class="scrolly w-full transition-transform duration-300 transform hover:translate-x-2 hover-lightsaber">Contact</a>
 						</div>
 					</div>
 
@@ -204,11 +255,12 @@
 			</section>
 			
 			<!-- about-me Section -->
-			<section id="about-me" class="spotlight style1 bottom">
+			<section id="about-me" class="spotlight style1 bottom" aria-labelledby="about-heading">
 				<span class="image fit main"><img src="/images/nyc.webp" alt="NYC image" /></span>
 				<div class="content">
 					<div class="container">
 						<div class="flex flex-col">
+							<h2 id="about-heading" class="sr-only">About Me</h2>
 							<p class="text-left md:mx-40 md:text-lg font-serif">
 								I started my career in 2015 after completing a Master's degree in Computer Science and Math. For the following two years, I worked as a CS teacher, helping students grasp core CS concepts.
 								</br></br>
@@ -228,12 +280,13 @@
 			</section>
 
 			<!-- project cybersecurity -->
-			<section id="cybersecurity" class="spotlight style1 left">
+			<section id="cybersecurity" class="spotlight style1 left" aria-labelledby="projects-heading">
 				<span class="image fit main"><img src="images/projects/cyber.webp" alt="cybersecurity_project" /></span>
 				
 				<div class="content flex flex-col justify-between font-bold">
 					<div>
-						<h2 class="text-3xl m-0 special-font">Multiple Cybersecurity Platforms</h2>
+						<h2 id="projects-heading" class="text-3xl m-0 special-font"></h2>
+						<h3 class="text-2xl mt-2 special-font">Multiple Cybersecurity Platforms</h3>
 					</div>
 
 					<div class="text-base text-left">
@@ -257,7 +310,7 @@
 				
 				<div class="content flex flex-col justify-between font-bold">
 					<div>
-						<h2 class="text-3xl m-0 special-font">Blue & Yellow</h2>
+						<h3 class="text-3xl m-0 special-font">Blue & Yellow</h3>
 						<p>Website for Donations</p>
 					</div>
 					
@@ -286,7 +339,7 @@
 				
 				<div class="content flex flex-col justify-between font-bold">
 					<div>
-						<h2 class="text-3xl m-0 special-font">Invest Pulse</h2>
+						<h3 class="text-3xl m-0 special-font">Invest Pulse</h3>
 						<p>Stock Market Tracking App</p>
 					</div>
 					
@@ -309,7 +362,7 @@
 				<span class="image fit main"><img src="images/projects/culture-bot.webp" alt="culture bot project" /></span>
 				<div class="content flex flex-col justify-between font-bold">
 					<div>
-						<h2 class="text-3xl m-0 special-font">CultureBot</h2>
+						<h3 class="text-3xl m-0 special-font">CultureBot</h3>
 						<p>Employee Engagement App</p>
 					</div>
 
@@ -332,7 +385,7 @@
 				<span class="image fit main bottom"><img src="images/projects/itinerator-screenshot.webp" alt="itinerator_project" /></span>
 				<div class="content flex flex-col justify-between font-bold">
 					<div>
-						<h2 class="text-3xl m-0 special-font">Itenerator</h2>
+						<h3 class="text-3xl m-0 special-font">Itenerator</h3>
 						<p>Personalized Activity Recommender</p>
 					</div>
 
@@ -357,7 +410,7 @@
 				<span class="image fit main"><img src="images/projects/torque-screenshot.webp" alt="racing game project" /></span>
 				<div class="content flex flex-col justify-between font-bold">
 					<div>
-						<h2 class="text-3xl m-0 special-font">Torque</h2>
+						<h3 class="text-3xl m-0 special-font">Torque</h3>
 						<p>Fast-paced Racing Game</p>
 					</div>
 
@@ -377,12 +430,12 @@
 			</section>
 
 			<!-- Five -->
-			<section id="resume" class="wrapper style1 special fade-up w-full relative">
+			<section id="resume" class="wrapper style1 special fade-up w-full relative" aria-labelledby="resume-heading">
 				<div class="container w-4/5">
 					<!-- Download Resume, file in docx format for convinience -->
-					<header> 
-						<h2 class="text-4xl font-bold">
-							<p class="justify-center special-font">Download resume</p>
+					<header>
+						<h2 id="resume-heading" class="text-4xl font-bold">
+							<p class="justify-center special-font">Resume</p>
 							<a class="hover:text-red-400" target="_blank" href="./assets/Anton_James_Resume.pdf">PDF</a>
 							<span>&nbsp;|&nbsp;</span>
 							<a class="hover:text-red-400" target="_blank" href="./assets/Anton_James_Resume.docx">DOC</a>
@@ -435,10 +488,10 @@
 			</section>
 
 			<!-- Contact -->
-			<section id="contact" class="wrapper style1 special fade-up w-full -mb-6 lg:-mb-18">
+			<section id="contact" class="wrapper style1 special fade-up w-full -mb-6 lg:-mb-18" aria-labelledby="contact-heading">
 				<div class="self-center container w-4/5">
 					<header>
-						<h2 class="font-bold special-font text-4xl">
+						<h2 id="contact-heading" class="font-bold special-font text-4xl">
 							Contact
 						</h2>
 						<div class="line my-8"></div>
