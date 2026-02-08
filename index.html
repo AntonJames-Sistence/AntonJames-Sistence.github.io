@@ -422,21 +422,30 @@
 			<!-- Five -->
 			<section id="resume" class="wrapper style1 special fade-up w-full relative" aria-labelledby="resume-heading">
 				<div class="container w-4/5">
-					<!-- Download Resume, file in docx format for convinience -->
+					<!-- Download Resume, file in docx format for convenience -->
 					<header>
 						<h2 id="resume-heading" class="text-4xl font-bold">
 							<p class="justify-center special-font">Resume</p>
-							<a class="hover:text-red-400" target="_blank" href="./assets/Anton_James_Resume.pdf">PDF</a>
+							<a class="hover:text-red-400" target="_blank" href="images/Anton_James_Resume.pdf">PDF</a>
 							<span>&nbsp;|&nbsp;</span>
-							<a class="hover:text-red-400" target="_blank" href="./assets/Anton_James_Resume.docx">DOC</a>
+							<a class="hover:text-red-400" target="_blank" href="images/Anton_James_Resume.docx">DOC</a>
 						</h2>
 						<div class="line my-8"></div>
 					</header>
 
+					<!-- Embedded PDF (browser built-in); fallback for browsers that don't display inline -->
 					<div class="flex justify-center">
-						<a href="./assets/Anton_James_Resume.pdf" target="_blank">
-							<img class="z-10 md:w-4/5 h-auto mx-auto flex self-center" src="images/resume.webp"></img>
-						</a>
+						<div class="w-full max-w-3xl rounded-lg overflow-hidden border border-gray-700/50 bg-gray-900/30 shadow-xl">
+							<iframe
+								title="Resume (PDF)"
+								src="images/Anton_James_Resume.pdf"
+								class="w-full border-0"
+								style="height: 70vh; min-height: 520px;"
+							></iframe>
+							<p class="p-3 text-center text-sm text-gray-400">
+								Can't see the PDF? <a href="images/Anton_James_Resume.pdf" target="_blank" rel="noopener" class="text-red-400 hover:underline">Open in new tab</a>
+							</p>
+						</div>
 					</div>
 				</div>
 
