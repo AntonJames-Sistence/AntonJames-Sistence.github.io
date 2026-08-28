@@ -137,7 +137,10 @@
 		}
 		</script>
 
-		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Tailwind, prebuilt via `npm run css` (was the Play CDN: 123KB of render-blocking JS).
+		     Re-run `npm run css` and commit assets/css/tailwind.css after adding new utility classes.
+		     Kept last in <head> so it overrides main.css exactly as the CDN's injected styles did. -->
+		<link rel="stylesheet" href="assets/css/tailwind.css" />
 		<script type="importmap" defer>
 			{
 				"imports": {

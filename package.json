@@ -1,8 +1,13 @@
 {
+  "scripts": {
+    "css": "tailwindcss -i assets/css/tailwind-input.css -o assets/css/tailwind.css --minify",
+    "css:watch": "tailwindcss -i assets/css/tailwind-input.css -o assets/css/tailwind.css --watch"
+  },
   "dependencies": {
     "three": "^0.157.0"
   },
   "devDependencies": {
+    "tailwindcss": "^3.4.19",
     "vite": "^4.4.11"
   }
 }
