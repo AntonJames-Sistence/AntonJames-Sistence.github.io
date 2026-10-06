@@ -92,4 +92,3 @@ These days I'm most interested in frontend architecture and design systems at sc
 
 [LinkedIn](https://www.linkedin.com/in/anton-james-ja/) · [GitHub](https://github.com/AntonJames-Sistence/) · [antonjames.dev](https://antonjames.dev/)
 
-Thanks for visiting! 😊

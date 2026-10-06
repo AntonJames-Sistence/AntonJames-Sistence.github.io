@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Same resume content as the PDF, in a format that can't carry a canonical tag
+# or a noindex meta. Blocked so Google doesn't treat the pair as duplicates.
+Disallow: /images/Anton_James_Resume.docx
+
 Sitemap: https://antonjames.dev/sitemap.xml
